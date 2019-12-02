@@ -6,7 +6,9 @@ Non-parametric Bayesian Model
 > What is Non-parametric?
 
 
-
+## Background Study
+### Dirichlet Distribution
+This is a distribution on a probability distribution.
 
 
 
