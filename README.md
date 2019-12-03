@@ -9,7 +9,7 @@ Non-parametric Bayesian Model
 ## Background Study
 ### > Dirichlet Distribution
 This is a distribution on a probability distribution.
-<img src="https://user-images.githubusercontent.com/31917400/70050530-18626c00-15c7-11ea-9339-873983617c97.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/70058429-c9243780-15d6-11ea-8fba-deac7aa8066e.jpg" />
 
 
 
