@@ -10,7 +10,7 @@ This is a distribution on a probability distribution
 --------------------------------------------------------------------------------------------------------------------
 
 ## 1. Gaussian Process
-
+For any set `S`, **GP on `S`** refers to a bunch of random variables whose index is the member of the set `S` such that they can have the following properties: The bunch of variables are normally multivariate distributed! 
 
 
 
