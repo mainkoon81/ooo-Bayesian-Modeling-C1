@@ -9,7 +9,7 @@ Non-parametric Bayesian Model
 It's a distribution on a probability distribution. It's a distribution over `n` dimensional vectors. 
  - Each `θ` has its own `α`.
  - Each `θ` has its own distribution.
-<img src="https://user-images.githubusercontent.com/31917400/70058429-c9243780-15d6-11ea-8fba-deac7aa8066e.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/73608531-38f57500-45bc-11ea-8c72-1fdc2c616cd4.png" />
 
 --------------------------------------------------------------------------------------------------------------------
 
