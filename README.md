@@ -2,11 +2,11 @@
 Non-parametric Bayesian Model
 
 ## Background Study
-### > Gaussian Distribution
+### > Gaussian Story
 <img src="https://user-images.githubusercontent.com/31917400/73613995-07e46700-45f3-11ea-8760-6ae349c15dd8.png" />
 
 
-### > Dirichlet Distribution
+### > Dirichlet Story
 It's a distribution on probability distributions. It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
  - Dirichlet distribution is the conjugate prior for the **multinomial likelihood**.
  - Each `θ_i` has its own `α`...weight for each distribution of `θ_i`
