@@ -6,7 +6,7 @@ Non-parametric Bayesian Model
 
 
 ### > Dirichlet Distribution
-It's a distribution on a probability distribution. It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
+It's a distribution on probability distributions. It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
  - Dirichlet distribution is the conjugate prior for the **multinomial likelihood**.
  - Each `θ_i` has its own `α`...weight for each distribution of `θ_i`
  - Each `θ_i` has its own distribution.
