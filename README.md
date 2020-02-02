@@ -3,6 +3,7 @@ Non-parametric Bayesian Model
 
 ## Background Study
 ### > Gaussian Distribution
+<img src="https://user-images.githubusercontent.com/31917400/73613995-07e46700-45f3-11ea-8760-6ae349c15dd8.png" />
 
 
 ### > Dirichlet Distribution
