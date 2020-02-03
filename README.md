@@ -22,6 +22,10 @@ For any set `S`, **GP on `S`** refers to a bunch of random variables(pdf functio
 It is a distribution over functions. 
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
+To make the prediction, take the point (x, f(x)), then try to generate the mean and CI(or cov): Given that having training set, I try to combine the data with the prior of the functions(with mean and cov)..to make my functions smooth. Use a similarity matrix such that our function approximator makes the two points close by when we fit new data to make sure the two hights are also close by.    
+<img src="https://user-images.githubusercontent.com/31917400/73651234-eed3c880-467b-11ea-95ed-3f1aff0414f7.png" />
+
+
 ```
 from __future__ import division # from a module "__future__"
 import numpy as np
