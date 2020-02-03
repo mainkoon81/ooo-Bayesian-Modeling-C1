@@ -23,7 +23,7 @@ It is a distribution over functions.
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
 To make the prediction, take the point (x, f(x)), then try to generate the mean and CI(or cov): Given that having training set, I try to combine the data with the prior of the functions(with mean and cov)..to make my functions smooth. Use a similarity matrix such that our function approximator makes the two points close by when we fit new data to make sure the two hights are also close by.    
-<img src="https://user-images.githubusercontent.com/31917400/73651591-a2d55380-467c-11ea-918d-55d748da3589.png" />
+<img src="https://user-images.githubusercontent.com/31917400/73652179-2d6a8280-467e-11ea-8651-2c115fe2c1e7.png" />
 
 
 ```
