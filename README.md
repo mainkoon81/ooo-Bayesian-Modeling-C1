@@ -19,7 +19,8 @@ It's a distribution on probability distributions. It's a distribution over `n` d
 ## 1. Gaussian Process and Non-linear Problem
 For any set `S`, **GP on `S`** refers to a bunch of random variables whose index is the member of the set `S` such that they can have the following properties: The bunch of variables are normally multivariate distributed! 
 
-
+It is a distribution over functions. 
+<img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
 
 
