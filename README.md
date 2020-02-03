@@ -27,7 +27,7 @@ from __future__ import division # from a module "__future__"
 import numpy as np
 import matplotlib.pyplot as plt
 
-# GaussianProcess' squard exponential
+# GaussianProcess' squared exponential
 def kernel(a, b) 
    SQdist = np.sum(a**2, 1).reshape(-1, 1) + np.sum(b**2, 1) - 2*np.dot(a, b.T)
    return(np.exp(-0.5 * SQdist)
