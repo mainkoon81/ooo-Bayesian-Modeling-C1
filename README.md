@@ -22,6 +22,26 @@ For any set `S`, **GP on `S`** refers to a bunch of random variables(pdf) whose 
 It is a distribution over functions. 
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
+```
+from_future_import division
+import numpy as np
+import matplotlib.pyplot as plt
+
+# GaussianProcess' squard exponential
+def kernel(a, b) 
+   SQdist = np.sum(a**2, 1).reshape(-1, 1) + np.sum(b**2, 1) - 2*np.dot(a, b.T)
+   return(np.exp(-0.5 * SQdist)
+
+n = 50
+X_text = np.linspace(-5, 5, n).reshape(-1, 1)
+K_ = kernel(X_text, X_test)
+
+# Draw samples from the prior 
+L = np.linalg.cholesky(K_ + 1e-6*np.eye(n))
+f_prior = np.dot(L, np.random.normal(size= (n, 10)))
+
+plt.plot(X_test, f_prior)
+```
 
 
 
