@@ -8,11 +8,18 @@ Non-parametric Bayesian Model
 
 ### > Dirichlet Story
 Dirichlet Distribution is a distribution on multinomial distributions. It is a generalized beta distribution. 
-<img src="https://user-images.githubusercontent.com/31917400/73672651-315dcb00-46a5-11ea-8b69-14a42933363d.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
 
- - Its **parameter** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(a, b, c)`  
-   - if a,b,c are all the same, then it would give uniform distribution outcome.  
- - Its **outcome** will be: `n` dimensional vector corresponding to some pmf over n possible outcomes: `c(?, ?, ?) where ?+?+? = 1`
+ - Its **parameter** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
+   - if α1,α2,α3 are all the same, then the outcome(`θ_i`) appears uniformly.  
+   - if α1,α2,α3 are small(<1), the outcome(`θ_i`) appears each corner and edge of the plane
+     - ## Push the distribution to the corners.
+   - if α1,α2,α3 are big(>1), the outcome(`θ_i`) appears in the center of the plane
+     - ## Push the distribution to the middle.
+   - Thus...α controls the mixture of outcomes. 
+     - Turn it down, and we will likely have different values for each outcome. 
+     - Turn it up, and we will likely have same values for each outcome.
+ - Its **outcome** will be: `n` dimensional vector corresponding to some pmf over n possible outcomes: `c(θ_1, θ_2, θ_3) where θ_1 + θ_2 + θ_3 = 1`
 It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
  - Dirichlet distribution is the conjugate prior for the **multinomial likelihood**.
  - Each `θ_i` has its own `α`...weight(scale) for each distribution of `θ_i`
