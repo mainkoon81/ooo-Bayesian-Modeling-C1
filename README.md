@@ -27,9 +27,18 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - Total sum of `θ_i` is 1.
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
+### Gaussian Mixture Model
+
+
+### Multinomial + Dirichlet conjugate relation
+
+
+### Random Process
+
+
 --------------------------------------------------------------------------------------------------------------------
 
-## 1. Gaussian Process and Non-linear Problem
+## A. Gaussian Process and Non-linear Problem
 For any set `S`, **GP on `S`** refers to a bunch of random variables(pdf functions: `f(x)`) whose index (`x`) is the member of the set `S` such that they can have the following properties: The bunch of variables(pdf functions: `f(x)`) are normally multivariate distributed, thus GP outputs from the mean function and cov function(a.k.a kernel function)!  
 
 It is a distribution over functions. 
@@ -63,7 +72,8 @@ plt.plot(X_test, f_prior)
 
 
 -------------------------------------------------------------------------------------------------
-## Dirichlet Process and  
+## B. Dirichlet Process and hyperparameter estimation???
+
 
 
 
