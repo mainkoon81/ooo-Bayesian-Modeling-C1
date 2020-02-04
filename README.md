@@ -31,10 +31,10 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - From GMM, how to get a control over the latent variable(with multinomial) dynamically? We want to automatically find the parameter(proportions) of the latent variable at the end. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
-   - We can generate or vary the **parameter** for the latent variable distribution, **using Dirichlet Process**!
-   <img src="https://user-images.githubusercontent.com/31917400/73756576-b5748900-475f-11ea-9b2b-1db6f910b8f0.jpg" />
-
-
+   - Solution:
+     - It is safe to say that our latent variable distribution is "multinomial" distribution.
+     - We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
+     <img src="https://user-images.githubusercontent.com/31917400/73756576-b5748900-475f-11ea-9b2b-1db6f910b8f0.jpg" />
 
  - Multinomial + Dirichlet conjugate relation
 
