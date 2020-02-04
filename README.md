@@ -34,7 +34,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - Solution:
      - It is safe to say that our latent variable distribution is "multinomial" distribution.
      - We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
-     <img src="https://user-images.githubusercontent.com/31917400/73756576-b5748900-475f-11ea-9b2b-1db6f910b8f0.jpg" />
+     <img src="https://user-images.githubusercontent.com/31917400/73758695-e2766b00-4762-11ea-87e9-5146f990ea99.jpg" />
 
  - Multinomial + Dirichlet conjugate relation
 
