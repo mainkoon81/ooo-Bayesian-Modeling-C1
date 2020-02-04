@@ -27,7 +27,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - Total sum of `θ_i` is 1.
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
-### Dirichlet Process gives solution! 
+### Automatic Hyperparameter Estimation? Dirichlet Process gives solution! 
  - From GMM, how to get a freedom from the latent variable? We want to automatically find the parameter(proportions) of the latent variable. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
