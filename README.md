@@ -28,7 +28,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
 ### Automatic Hyperparameter Estimation? Dirichlet Process gives solution! 
- - From GMM, how to get a control over the latent variable(with multinomial) dynamically? We want to automatically find the parameter(proportions) of the latent variable at the end. 
+ - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the parameter(proportions) of the latent variable at the end. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
    - Solution:
