@@ -28,8 +28,12 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
 ### Automatic Hyperparameter Estimation? Dirichlet Process gives solution! 
- - From GMM, how to get a freedom from the latent variable? We want to automatically find the parameter(proportions) of the latent variable. 
+ - From GMM, how to get a control over the latent variable(with multinomial) dynamically? We want to automatically find the parameter(proportions) of the latent variable at the end. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
+
+   - We can generate or vary the **parameter** for the latent variable distribution, **using Dirichlet Process**!
+   <img src="https://user-images.githubusercontent.com/31917400/73756576-b5748900-475f-11ea-9b2b-1db6f910b8f0.jpg" />
+
 
 
  - Multinomial + Dirichlet conjugate relation
