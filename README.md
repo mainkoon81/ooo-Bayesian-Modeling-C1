@@ -43,7 +43,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 
    - Idea 03: `the **latent variable parameter** can ...... !`
      - Random(Stochastic) Process refers to the infinitely labeled(infinitely hyperparameterized) collection of random variables.
-     - With the passage of time(or value space)`t`, the outcomes(obv, samples or..labels)`w` of a certain experiment will change...
+     - With the passage of time(data, value space)`t`, the outcomes(obv, samples or..labels)`w` of a certain experiment will change...
      <img src="https://user-images.githubusercontent.com/31917400/73774277-9e439480-477b-11ea-8275-b1f3bbe6d951.jpg" />
 
 --------------------------------------------------------------------------------------------------------------------
