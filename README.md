@@ -27,13 +27,15 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - Total sum of `θ_i` is 1.
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
-### Gaussian Mixture Model
+### Dirichlet Process gives solution! 
+ - From GMM, how to get a freedom of the latent variable? 
+ <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
 
-### Multinomial + Dirichlet conjugate relation
+ - Multinomial + Dirichlet conjugate relation
 
 
-### Random Process
+ - Random Process
 
 
 --------------------------------------------------------------------------------------------------------------------
