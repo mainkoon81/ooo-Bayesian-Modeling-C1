@@ -27,20 +27,21 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - Total sum of `θ_i` is 1.
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
-### Automatic Hyperparameter Estimation? 
- - [point 01.] From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the parameter(proportions) of the latent variable at the end. 
+### Automatic Hyperparameter Estimation? (determining parameter size??) 
+ - [Q] From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
-   - Solution: `Random Variablizing the latent variable parameter!` 
+   - Idea 01: `Random Variablizing the **latent variable parameter**!` 
      - "latent variable" distribution = "multinomial" distribution.
      - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
      <img src="https://user-images.githubusercontent.com/31917400/73760133-db505c80-4764-11ea-8efa-61a47729f4c7.jpg" />
 
- - [point 02.] Multinomial + Dirichlet conjugate relation tells us parameter value(posterior) can be updated by the introduction of new data(likelihood)!  
- <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
+   - Idea 02: `the **latent variable parameter** can be controlled by data!`
+     - Multinomial + Dirichlet conjugate relation tells us parameter value(posterior) can be updated by the introduction of new data(likelihood)!  
+     <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
 
- - [point 03.] Random Process
+   - Idea 03: Random Process
 
 
 --------------------------------------------------------------------------------------------------------------------
