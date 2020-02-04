@@ -29,7 +29,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 
 ### Dirichlet Process gives solution! 
  - From GMM, how to get a freedom of the latent variable? 
- <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
+ <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
 
  - Multinomial + Dirichlet conjugate relation
