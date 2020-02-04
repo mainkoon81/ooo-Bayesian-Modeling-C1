@@ -29,6 +29,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 
 ### Automatic Hyperparameter Estimation? Random Variablizing the latent variable parameter! 
  - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the parameter(proportions) of the latent variable at the end. 
+   - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
    - Solution:
