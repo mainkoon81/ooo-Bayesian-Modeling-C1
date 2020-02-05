@@ -37,11 +37,14 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
      <img src="https://user-images.githubusercontent.com/31917400/73760133-db505c80-4764-11ea-8efa-61a47729f4c7.jpg" />
 
-   - Idea 02: `there is a way where **latent variable parameter** can be controlled by data!`
+   - Idea 02: `**latent variable parameter value** can be controlled by data!`
      - Multinomial + Dirichlet conjugate relation tells us parameter value(posterior) can be updated by the introduction of new data(likelihood)!  
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
 
-   - Idea 03: `the **latent variable parameter** can ...... !`
+   - Idea 03: `**latent variable parameter value** can be controlled by hyperparameter!`
+     - parameter size VS parameter value ???
+       - if you know parameter size`t`, then you can expect the parameter value distribution.    
+       - if you know parameter value`w`, then you can expect the data distribution.
      - Random(Stochastic) Process refers to the infinitely labeled(infinitely hyperparameterized) collection of random variables.
      - With the passage of time(infinite hyper-parameter)`t`, the outcomes(resulting parameter)`w` of a certain experiment will change...
      <img src="https://user-images.githubusercontent.com/31917400/73774277-9e439480-477b-11ea-8275-b1f3bbe6d951.jpg" />
