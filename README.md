@@ -43,7 +43,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 
    - Idea 03: `**latent variable parameter value** can be controlled by hyperparameter!`
      - parameter size VS parameter value ???
-       - if you know parameter size`t`, then you can expect the parameter value distribution.    
+       - if you know parameter size`t`, then you can expect the parameter value`w` distribution.    
        - if you know parameter value`w`, then you can expect the data distribution.
      - Random(Stochastic) Process refers to the infinitely labeled(infinitely hyperparameterized) collection of random variables.
      - With the passage of time(infinite hyper-parameter)`t`, the outcomes(resulting parameter)`w` of a certain experiment will change...
