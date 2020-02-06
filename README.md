@@ -111,8 +111,7 @@ plt.plot(X_test, f_prior)
    - After that, how to draw a data point from the `distribution G(A)` sampled from the DP(`α`, `H`)? 
    - Actually, we can think of a Non-parametric **prior construction** scheme coz..it's not easy to conceive "A" space that can go to infinity!
      - Sol 1) Stick-Breaking scheme(sampling distribution)
-     - Sol 2) Polya-Urn scheme(just sampling point)
-     - Sol 3) Chinese-Restaurant scheme(just sampling point)
+     - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
  - ### Stick-Breaking scheme: 
    - 
@@ -121,13 +120,7 @@ plt.plot(X_test, f_prior)
    
    
    
- - ### Polya-Urn scheme:
-   
-   
-   
-   
-   
- - ### Chinese-Restaurant scheme:
+ - ### Polya-Urn scheme or Chinese-Restaurant scheme:
    
  
 
