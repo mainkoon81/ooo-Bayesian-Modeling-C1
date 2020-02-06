@@ -1,5 +1,7 @@
 # ooo-Minkun-Model-Collection-V-
 Non-parametric Bayesian Model
+ - GP
+ - DP
 
 ## Background Study
 ### > Gaussian Story
@@ -94,7 +96,7 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-`α` yields `π` which is `G(?)`. We want to get a control over our latent variable. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
+`α` yields: `π` which is `G(?)`. We want to get a control over our latent variable. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
  - We assign base probability(pdf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - A1, A2, A3...- on the sample space.  
  - ## key is `Prior` !!!
    - At the end of the day, the hyperparameter control(probability space partitioning to assgin to hyperparameter) can be done by manipulating "prior" (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable parameter `π` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
@@ -104,7 +106,24 @@ plt.plot(X_test, f_prior)
    - we can get a control over **hyperparameter `α`**. 
 <img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
 
-
+ - Sampling a "function" from prior: DP(`α`, `H`)
+   - Each sample is an instance(parameter `π` for multinomial so..its a probability) but at the same time, a `distribution G(A)`.
+   - After that, how to draw a data point from the `distribution G(A)` sampled from the DP(`α`, `H`)? 
+   - Actually, we need a construction scheme coz..it's not easy to concieve "A" space!
+     - 1.Stick-Breaking scheme
+     - 2.Polya-Urn scheme
+     - 3.Chinese-Restaurant scheme
+   - 1. Stick-Breaking scheme: 
+   
+   
+   
+   - 2. Polya-Urn scheme:
+   
+   
+   
+   - 3. Chinese-Restaurant scheme:
+   
+ 
 
 
 
