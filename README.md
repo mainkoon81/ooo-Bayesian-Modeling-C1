@@ -98,7 +98,7 @@ plt.plot(X_test, f_prior)
  - We assign base probability(pdf `H`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - a1, a2, a3...- on the sample space.  
  - ## key is `Prior` !!!
    - At the end of the day, the hyperparameter control(probability space partitioning to assgin to hyperparameter) can be done by manipulating "prior" (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable parameter `π` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition). 
-<img src="https://user-images.githubusercontent.com/31917400/73895821-cd8bfb80-4878-11ea-9def-c2a8e3540ded.png" />
+<img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
 
 
 
