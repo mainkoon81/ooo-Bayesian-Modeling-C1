@@ -109,12 +109,14 @@ plt.plot(X_test, f_prior)
  - Sampling a "function" from prior: DP(`α`, `H`)
    - Each sample is an instance(parameter `π` for multinomial so..its a probability) but at the same time, a `distribution G(A)`.
    - After that, how to draw a data point from the `distribution G(A)` sampled from the DP(`α`, `H`)? 
-   - Actually, we can think of a Non-parametric **prior construction** scheme coz..it's not easy to conceive "A" space that can go to infinity!
+   - Actually, we can think of a Non-parametric **prior construction** scheme coz..it's not easy to conceive "A" space that can go to infinity! 
      - Sol 1) Stick-Breaking scheme(sampling distribution)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
  - ### Stick-Breaking scheme: 
    - 
+   <img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
+
    
    
    
