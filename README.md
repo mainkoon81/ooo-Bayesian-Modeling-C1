@@ -39,18 +39,16 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
      <img src="https://user-images.githubusercontent.com/31917400/73760133-db505c80-4764-11ea-8efa-61a47729f4c7.jpg" />
 
-   - Idea 02: `**latent variable parameter value** can be controlled by data!` but **how to address `α`?** 
+   - Idea 02: `**latent variable parameter value** can be controlled by data! but **how to address `α`?** `
      - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)!
      - We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! However, their occurance is not accurate? How to address the hyperparameter α that affects the sampling result ??? 
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
 
-   - Idea 03: `**latent variable parameter value** can be.....`
+   - Idea 03: `**latent variable parameter value** can be controlled by `
      - [Note] Random Variable: RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
        - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
-     - [Note] Random(stochastic) Process: RP is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we can’t determine with full confidence what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. Think of a stochastic process as how smoke particles collide with each other. Their unpredictable movements and collisions are random and are referred to as Brownian Motion. Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.
+     - [Note] Random(stochastic) Process: Random process is an infinite labeled collection of random variables. Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we can’t determine with full confidence what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. Think of a stochastic process as how smoke particles collide with each other. Their unpredictable movements and collisions are random and are referred to as Brownian Motion. Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.
        - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P,  
-     
-     
      
      - parameter size VS parameter value ???
        - if you know parameter size`t`, then you can expect the parameter value`w` distribution?.    
@@ -96,8 +94,9 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-`α` yields: `π` which is `G(?)`. We want to get a control over our latent variable. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
- - We assign base probability(pdf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - A1, A2, A3...- on the sample space.  
+`α` yields: `π` which is `G(?)`. We carry on DP while the sample dimensionality is not defined yet.
+ - We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
+ - We assign base probability(pmf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - A1, A2, A3...- on the sample space.  
  - ## key is `Prior` !!!
    - At the end of the day, the hyperparameter control(probability space partitioning to assgin to hyperparameter) can be done by manipulating "prior" (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable parameter `π` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
    - Although our initial **hyperparameter `α`** in the prior `Dir(α)` is rubbish,  
@@ -109,19 +108,25 @@ plt.plot(X_test, f_prior)
  - Sampling a "function" from prior: DP(`α`, `H`)
    - Each sample is an instance(parameter `π` for multinomial so..its a probability) but at the same time, a `distribution G(A)`.
    - After that, how to draw a data point from the `distribution G(A)` sampled from the DP(`α`, `H`)? 
-   - Actually, we need a construction scheme coz..it's not easy to concieve "A" space!
-     - 1.Stick-Breaking scheme
-     - 2.Polya-Urn scheme
-     - 3.Chinese-Restaurant scheme
-   - 1. Stick-Breaking scheme: 
+   - Actually, we can think of a Non-parametric **prior construction** scheme coz..it's not easy to conceive "A" space that can go to infinity!
+     - Sol 1) Stick-Breaking scheme(sampling distribution)
+     - Sol 2) Polya-Urn scheme(just sampling point)
+     - Sol 3) Chinese-Restaurant scheme(just sampling point)
+     
+ - ### Stick-Breaking scheme: 
+   - 
    
    
    
-   - 2. Polya-Urn scheme:
+   
+   
+ - ### Polya-Urn scheme:
    
    
    
-   - 3. Chinese-Restaurant scheme:
+   
+   
+ - ### Chinese-Restaurant scheme:
    
  
 
