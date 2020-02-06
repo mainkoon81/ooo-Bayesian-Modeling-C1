@@ -94,8 +94,8 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-`α` yields `π` which is `E[G(?)]`. We want to get a control over our latent variable. The latent variable parameter `π` can be controlled by the **hyperparameter `α`** from the Dirichlet Sampling. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
- - We assign base probability(pdf `H`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - a1, a2, a3...- on the sample space.  
+`α` yields `π` which is `G(?)`. We want to get a control over our latent variable. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
+ - We assign base probability(pdf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - A1, A2, A3...- on the sample space.  
  - ## key is `Prior` !!!
    - At the end of the day, the hyperparameter control(probability space partitioning to assgin to hyperparameter) can be done by manipulating "prior" (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable parameter `π` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
    - Although our initial **hyperparameter `α`** in the prior `Dir(α)` is rubbish,  
