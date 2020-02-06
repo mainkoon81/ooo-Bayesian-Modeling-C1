@@ -57,6 +57,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      - With the passage of time(infinite hyper-parameter)`t`?? , the outcomes(resulting parameter)`w`?? of a certain experiment will change...
      <img src="https://user-images.githubusercontent.com/31917400/73839150-32aa0780-480d-11ea-9baa-3e9f4a6c712f.jpg" />
 
+     - ## But how Random Process can deal with infinite hyper-parameter?
 --------------------------------------------------------------------------------------------------------------------
 
 ## A. Gaussian Process and Non-linear Problem
