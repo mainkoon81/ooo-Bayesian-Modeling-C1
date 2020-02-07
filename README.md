@@ -113,15 +113,11 @@ plt.plot(X_test, f_prior)
      - Sol 1) Stick-Breaking scheme(sampling distribution)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
- - ### Stick-Breaking scheme: 
-   - 
-   <img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
-
-   
-   
-   
-   
-   
+ - ### Stick-Breaking scheme: How to deal with pmf on infinite choice? 
+   - Sampling from the adjusted Beta: GEM(`α`)
+   - ??????????????
+   <img src="https://user-images.githubusercontent.com/31917400/73991728-f37ed200-4944-11ea-9c3c-0ed75eb21b59.jpg" />
+  
  - ### Polya-Urn scheme or Chinese-Restaurant scheme:
    
  
