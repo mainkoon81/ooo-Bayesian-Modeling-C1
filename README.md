@@ -114,7 +114,7 @@ plt.plot(X_test, f_prior)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
  - ### Stick-Breaking scheme: How to deal with pmf on infinite choice? 
-   - Sampling from the adjusted Beta: GEM(`α`)
+   - Sampling a decent distribution using the adjusted Beta: GEM(`α`)
    - ??????????????
    <img src="https://user-images.githubusercontent.com/31917400/73991728-f37ed200-4944-11ea-9c3c-0ed75eb21b59.jpg" />
   
