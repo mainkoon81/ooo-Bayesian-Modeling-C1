@@ -95,7 +95,7 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-`α` yields: `π` which is `G(?)`. We carry on DP while the sample dimensionality is not defined yet.
+`α` yields: `π` which is `G(?) distribution`. We carry on DP while the sample dimensionality is not defined yet.
  - We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
  - We assign base probability(pmf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...)! Now we need to get a control over such probability assigning mechanism. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial values(parameters),... we can think of an infinite number of partitions - A1, A2, A3...- on the sample space.  
  - ## key is `Prior` !!!
@@ -113,13 +113,16 @@ plt.plot(X_test, f_prior)
      - Sol 1) Stick-Breaking scheme(sampling distribution)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
- - ### Stick-Breaking scheme: How to deal with pmf on infinite choice? 
-   - Sampling a decent distribution using the adjusted Beta: GEM(`α`)
+ - ### Stick-Breaking scheme: How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
+   - Sampling a decent distribution 'G(A)`? using the adjusted Beta: GEM(`α`)
    - ??????????????
    <img src="https://user-images.githubusercontent.com/31917400/73991728-f37ed200-4944-11ea-9c3c-0ed75eb21b59.jpg" />
   
- - ### Polya-Urn scheme or Chinese-Restaurant scheme:
-   
+
+## C. ChineseRestaurantProcess + de Finetti's theorem + GibbsSampling 
+
+
+## D. Dirichlet Process Mixture Model   
  
 
 
