@@ -139,7 +139,7 @@ plt.plot(X_test, f_prior)
      - The exechangeability is important coz...
        - Chinese-Restaurant-Process is exchangeable process
        - Gibbs Sampling should use the exchangeability coz...its sampling is carried out one label by one label...so can ignore labeling order. 
-   <img src="https://user-images.githubusercontent.com/31917400/74086777-309aaf80-4a7e-11ea-8e1d-dd921ab58512.jpg" />
+       <img src="https://user-images.githubusercontent.com/31917400/74086777-309aaf80-4a7e-11ea-8e1d-dd921ab58512.jpg" />
 
 ## C. Dirichlet Process Mixture Model   
  
