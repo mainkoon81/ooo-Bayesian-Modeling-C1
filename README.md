@@ -34,7 +34,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
 
-   - ### What we want is `π`... 
+   - ### What we want is `π`... Done and Dusted!
    - Idea 01: `**latent variable parameter** can be treated as a random variable.` 
      - "latent variable" distribution = "multinomial" distribution.
      - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
