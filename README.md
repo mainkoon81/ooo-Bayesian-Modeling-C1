@@ -108,7 +108,8 @@ plt.plot(X_test, f_prior)
    - but what `function`?
 <img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
 
- - Sampling a "function" from prior: DP(`α`, `H`)
+ - The output of the Dirichlet (which is a parameter values) can also have a form of function.
+ - Sampling the output "function" from prior: DP(`α`, `H`)
    - Each sample is an instance(parameter `π` for multinomial so..its a probability) but at the same time, a `distribution G(A)`.
    - After that, how to draw a data point from the `distribution G(A)` sampled from the DP(`α`, `H`)? 
    - Actually, we can think of a Non-parametric **prior construction** scheme coz..it's not easy to conceive "A" space that can go to infinity! 
