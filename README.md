@@ -143,10 +143,18 @@ plt.plot(X_test, f_prior)
 
 ## C. Dirichlet Process Mixture Model   
 Think about the parameter of a mixture model. 
-<img src="https://user-images.githubusercontent.com/31917400/74091824-5f337d00-4ab4-11ea-99ed-ff85e7fd7125.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/74092657-02898f80-4abf-11ea-90bb-ef529e08ef6e.jpg" />
 
 ### > Implementation
- - 
+ - Step I. Initial Labeling(assign table) to every point.
+ - Step II. While Gibbs Sampling Iteration with each data instance:
+   - For each data instance:
+     - Remove the instance from the label
+     - Calculate the prior labal 
+     - Calculate the likelihood 
+     - Calculate the posterior
+     - Sample the label from the posterior
+     - Update the component parameter
 
 
 
