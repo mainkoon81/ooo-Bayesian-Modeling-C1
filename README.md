@@ -117,7 +117,8 @@ plt.plot(X_test, f_prior)
      - Sol 1) Stick-Breaking scheme(sampling distribution)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
- - ### Stick-Breaking scheme: How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
+ - ### Stick-Breaking scheme: 
+   - How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
    - Sampling a decent distribution 'G(A)', 
      - Using the "adjusted Beta": GEM(`α`) which is a probability value. 
      - times
