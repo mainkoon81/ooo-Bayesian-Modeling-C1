@@ -9,6 +9,7 @@ Non-parametric Bayesian Model
 
 
 ### > Dirichlet Story
+### Dirichlet eats `θ` !
 Dirichlet Distribution is a distribution on multinomial distributions. It is a generalized beta distribution. 
 <img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
 
