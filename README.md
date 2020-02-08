@@ -9,7 +9,7 @@ Non-parametric Bayesian Model
 
 
 ### > Dirichlet Story
-### Dirichlet eats `θ` and spit `θ`!
+### Dirichlet eats `θ` and spits `θ`!
 Dirichlet Distribution is a distribution on multinomial distributions. It is a generalized beta distribution. 
 <img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
 
@@ -112,7 +112,7 @@ plt.plot(X_test, f_prior)
  - The output of the Dirichlet (which is a parameter values) can also have a form of "function".
  - Sampling the output "function" from prior: DP(`α`, `H`)
    - Each sample is an instance(parameter `π` for multinomial so..its a probability) but at the same time, a `distribution G(A)`.
-   - After that, how to draw a data point from the `distribution G(A)` sampled from the DP(`α`, `H`)? 
+   - After that, how to draw a data point "`distribution G(A)`" sampled from the DP(`α`, `H`)? 
    - Actually, we can think of a Non-parametric **prior construction** scheme coz..it's not easy to conceive "A" space that can go to infinity! 
      - Sol 1) Stick-Breaking scheme(sampling distribution)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
