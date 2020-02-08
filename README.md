@@ -130,13 +130,15 @@ plt.plot(X_test, f_prior)
    <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
   
  - ### 2. ChineseRestaurantProcess scheme:
-   - Rich get richer... 
+   - Calculate the probability of each probability `π`... to create "prior"
+   - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
-   - 
    <img src="https://user-images.githubusercontent.com/31917400/74086626-7f474a00-4a7c-11ea-86ec-a6514261257b.jpg" />
    
-   - de Finetti's theorem + GibbsSampling 
-
+   - de Finetti's theorem + GibbsSampling
+     - 
+     - 
+   <img src="https://user-images.githubusercontent.com/31917400/74086777-309aaf80-4a7e-11ea-8e1d-dd921ab58512.jpg" />
 
 ## C. Dirichlet Process Mixture Model   
  
