@@ -97,7 +97,7 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-`α` yields: `π` which is `G(A): the distribution of data in "A" partition`???. We carry on DP while the sample dimensionality is not defined yet.
+'Z' as a label can be 1,2,3,...∞. `π` is a vector: c(P(Z=1), P(Z=2), ..P(Z=∞)). The hyperparameter `α` yields: `π` which is `G(A): the distribution of data in "A" partition`???. We carry on DP while the sample dimensionality is not defined yet.
  - We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
  - "We assign base probability(pmf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...) in Dirichlet"!!!!!!!! Now we need to get a control over such **probability assigning mechanism** in Dirichlet. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial probability values(parameters),...thus, we can think of an infinite number of partitions - A1, A2, A3...- on the event space. We need a mechanism that governs such event spaces.  
  - ## key is `Prior` !!!
