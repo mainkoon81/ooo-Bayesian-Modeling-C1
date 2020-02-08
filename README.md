@@ -102,9 +102,10 @@ plt.plot(X_test, f_prior)
  - ## key is `Prior` !!!
    - At the end of the day, the hyperparameter control(probability space partitioning to assgin to hyperparameter) can be done by manipulating "prior" (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable parameter `π` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
    - Although our initial **hyperparameter `α`** in the prior `Dir(α)` is rubbish,  
-     - By building up a form of function inside of **hyperparameter `α`**  in `Dir(α)`, 
+     - By building up some `"function"` inside of **hyperparameter `α`**  in `Dir(α)`, 
      - By iterating and updating the prior `Dir(α)`, introducing new datepoints, 
    - we can get a control over **hyperparameter `α`**. 
+   - but what `function`?
 <img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
 
  - Sampling a "function" from prior: DP(`α`, `H`)
