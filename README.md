@@ -118,9 +118,12 @@ plt.plot(X_test, f_prior)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
  - ### Stick-Breaking scheme: How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
-   - Sampling a decent distribution 'G(A)`, using the adjusted Beta: GEM(`α`) ??????
-   - ??????????????
-   <img src="https://user-images.githubusercontent.com/31917400/73991728-f37ed200-4944-11ea-9c3c-0ed75eb21b59.jpg" />
+   - Sampling a decent distribution 'G(A)', 
+     - Using the "adjusted Beta": GEM(`α`) which is a probability value. 
+     - times
+     - Using the number(count) of events(`π` pt) at the event space `A_k`
+     - then Sum them up! It would give you new `π` estimation ??????????????????????
+   <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
   
 
 ## C. ChineseRestaurantProcess + de Finetti's theorem + GibbsSampling 
