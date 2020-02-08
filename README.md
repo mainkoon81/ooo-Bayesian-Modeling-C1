@@ -106,7 +106,7 @@ plt.plot(X_test, f_prior)
      - By iterating and updating the prior `Dir(α)`, introducing new datepoints, 
    - we can get a control over **hyperparameter `α`**. 
    - but what `function`?
-<img src="https://user-images.githubusercontent.com/31917400/73934366-29d13880-48d6-11ea-81f2-4f66fb31b1b5.png" />
+<img src="https://user-images.githubusercontent.com/31917400/74084847-0095e100-4a6b-11ea-9c01-a3101f6f902a.png" />
 
  - The output of the Dirichlet (which is a parameter values) can also have a form of "function".
  - Sampling the output "function" from prior: DP(`α`, `H`)
