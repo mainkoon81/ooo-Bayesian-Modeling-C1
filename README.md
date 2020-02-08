@@ -120,7 +120,7 @@ plt.plot(X_test, f_prior)
  - ### Stick-Breaking scheme: 
    - How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
    - Sampling a decent distribution 'G(A)', 
-     - Using the "adjusted Beta": GEM(`α`) which is a probability value. 
+     - Using the "adjusted Beta": GEM(`α`) which is an adjusted probability value. 
      - times
      - Using the number(count) of events(`π` pt) at the event space `A_k`
      - then Sum them up! It would give you new `π` estimation ??????????????????????
