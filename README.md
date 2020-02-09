@@ -97,7 +97,11 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-DP is used to determine the probability of all possible labeling (i.e., set partitions) of elements to categories. ![formula](https://render.githubusercontent.com/render/math?math=Z_k) 
+DP is used to determine the probability of all possible labeling of elements to categories. 
+<img src="https://user-images.githubusercontent.com/31917400/74110359-b6545300-4b83-11ea-8181-88b7b1a768de.jpg" />
+
+Let ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,...\theta_N) be the table parameters ![formula](https://render.githubusercontent.com/render/math?math=\phi_k) for each data point. For example, if we look at a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_6) = c({1,3},{2},{6,4,5}), then ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,\theta_3,\theta_4,\theta_5,\theta_6) is ![formula](https://render.githubusercontent.com/render/math?math=\phi_a,\phi_b,\phi_a,\phi_c,\phi_c,\phi_c). 
+
 
 'Z' as a label can be 1,2,3,...∞...and follows Multinomial(`π`). `π` is a parameter vector: c(P(Z=1), P(Z=2), ..P(Z=∞)). The hyperparameter vector `α` controls the **"clumpiness"** of the Dirichlet process. The hyperparameter vector `α` yields a parameter vector `π` which is `G(A): the distribution of data in "A" partition`??? -  Can we go with Gaussian??? We carry on DP while the sample dimensionality is not defined yet.
  - We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
@@ -144,24 +148,19 @@ DP is used to determine the probability of all possible labeling (i.e., set part
    - If a data pt ![formula](https://render.githubusercontent.com/render/math?math=x_i) belongs to the table 'K', the data pt will be drawn from some distribution **F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K))** which is parameterized by the corresponding parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K). `This can be likelihood`. 
    <img src="https://user-images.githubusercontent.com/31917400/74106820-ba6f7900-4b61-11ea-8025-47155a0d31dc.jpg" />
 
-   - We wish ![formula](https://render.githubusercontent.com/render/math?math=G_0) and F(![formula](https://render.githubusercontent.com/render/math?math=G_0)) have a conjugate relation for later. 
+   - We wish ![formula](https://render.githubusercontent.com/render/math?math=G_0) and F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K)) have a conjugate relation for later. 
    - At first glance, this model does not seem any different from a finite mixture model. However,the difference lies in the behavior as N(# of partitions you have) grows: here, the number of tables(and hence table parameters φ) will grow with N, which does not occur in a finite mixture model. This is the essence of the "non-parametric" aspect.
    - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
    <img src="https://user-images.githubusercontent.com/31917400/74086626-7f474a00-4a7c-11ea-86ec-a6514261257b.jpg" />
    
    - Inference:
-     - The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling.  
-   
+     - The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling. Let's say..given the previous partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), we remove one data pt `x` from the partition (prior) then re-added to the partition (likelihood) to obtain posterior: **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|`x`)**. This gives **new partition** (prior)! 
    - de Finetti's theorem + GibbsSampling
      - The exechangeability is important coz...
        - Chinese-Restaurant-Process is exchangeable process
        - Gibbs Sampling should use the exchangeability coz...its sampling is carried out one label by one label...so can ignore labeling order. 
        <img src="https://user-images.githubusercontent.com/31917400/74086777-309aaf80-4a7e-11ea-8e1d-dd921ab58512.jpg" />
-
-
-
-
 
 ## C. Dirichlet Process Mixture Model   
 Think about the parameter of a mixture model. 
