@@ -133,11 +133,13 @@ DP is used to determine the probability of all possible labeling (i.e., set part
   
  - ### 2. Chinese-Restaurant-Process scheme:
    - CRP is a sequence of distributions indexed by `K`. Let's say the CRP object is a "partition `π`".
-     - partition `π`: ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) = c(distr, distr, distr, ..) where n is a total data_size and each subset element(distribution) within a partition is a restaurant table K.    
-   - CRP(α,N) is a distribution over all `N`-partitions of the labeled set:     
-     - CRP(α,N) = c(![formula](https://render.githubusercontent.com/render/math?math=\pi_n,\pi_n,...\pi_n)) where each ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) refers to a partition. So we have `N`*partition objects. 
+     - partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) = c(distr, distr, distr, ..) where n is a total data_size and each subset element(distribution) within a partition is a restaurant table K.    
+   - CRP(α, N) is a distribution over all `N`-partitions of the labeled set:     
+     - CRP(α, N) = c(![formula](https://render.githubusercontent.com/render/math?math=\pi_n,\pi_n,...\pi_n)) where each ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) refers to a partition. So we have `N`*partition objects. 
    - Given a partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), the destination of the next person `n + 1` has the following distribution:  
    <img src="https://user-images.githubusercontent.com/31917400/74105783-cb67bc80-4b58-11ea-9012-20fa99bff2a7.jpg" />
+   
+   - Consider we have **partition objects** as many as the total datasize. From CRP(α, N), we can sample a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_N).   
    
    
    - Calculate the probability of each probability `π`... to create "prior"
