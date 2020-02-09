@@ -139,24 +139,29 @@ DP is used to determine the probability of all possible labeling (i.e., set part
    - Given a partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), the destination of the next person `n + 1` has the following distribution:  
    <img src="https://user-images.githubusercontent.com/31917400/74105783-cb67bc80-4b58-11ea-9012-20fa99bff2a7.jpg" />
    
-   - Consider we have **partition objects** as many as the total datasize. From CRP(α, N), we can sample a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_N), i.e, we first draw a single partition. 
-   - Next, for `each tables` within the drawn partition, we draw a parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) i.i.d. from the base distribution ![formula](https://render.githubusercontent.com/render/math?math=G_0). 
-   - If a data pt ![formula](https://render.githubusercontent.com/render/math?math=x_i) belongs to the table 'K', the data pt will be drawn from some distribution **F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K))** which is parameterized by the corresponding parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K).  
+   - To think about the mixture model, consider we have **partition objects** as many as the total datasize. From CRP(α, N), we can sample a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_N), i.e, we first draw a single partition. 
+   - Next, for `each tables` within the drawn partition, we draw a parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) i.i.d. from the base distribution ![formula](https://render.githubusercontent.com/render/math?math=G_0). `This can be prior`.
+   - If a data pt ![formula](https://render.githubusercontent.com/render/math?math=x_i) belongs to the table 'K', the data pt will be drawn from some distribution **F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K))** which is parameterized by the corresponding parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K). `This can be likelihood`. 
    <img src="https://user-images.githubusercontent.com/31917400/74106820-ba6f7900-4b61-11ea-8025-47155a0d31dc.jpg" />
 
-   - 
-
-
-   - Calculate the probability of each probability `π`... to create "prior"
+   - We wish ![formula](https://render.githubusercontent.com/render/math?math=G_0) and F(![formula](https://render.githubusercontent.com/render/math?math=G_0)) have a conjugate relation for later. 
+   - At first glance, this model does not seem any different from a finite mixture model. However,the difference lies in the behavior as N(# of partitions you have) grows: here, the number of tables(and hence table parameters φ) will grow with N, which does not occur in a finite mixture model. This is the essence of the "non-parametric" aspect.
    - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
    <img src="https://user-images.githubusercontent.com/31917400/74086626-7f474a00-4a7c-11ea-86ec-a6514261257b.jpg" />
+   
+   - Inference:
+     - The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling.  
    
    - de Finetti's theorem + GibbsSampling
      - The exechangeability is important coz...
        - Chinese-Restaurant-Process is exchangeable process
        - Gibbs Sampling should use the exchangeability coz...its sampling is carried out one label by one label...so can ignore labeling order. 
        <img src="https://user-images.githubusercontent.com/31917400/74086777-309aaf80-4a7e-11ea-8e1d-dd921ab58512.jpg" />
+
+
+
+
 
 ## C. Dirichlet Process Mixture Model   
 Think about the parameter of a mixture model. 
