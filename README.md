@@ -97,11 +97,11 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-DP is used to determine the probability of all possible labeling of elements to categories. 
-<img src="https://user-images.githubusercontent.com/31917400/74110359-b6545300-4b83-11ea-8181-88b7b1a768de.jpg" />
-
-Let ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,...\theta_N) be the table(cluster) parameters ![formula](https://render.githubusercontent.com/render/math?math=\phi_k) for each data point. 
+DP is used to determine the probability of all possible labeling of elements to categories. Let ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,...\theta_N) be the table(cluster) parameters ![formula](https://render.githubusercontent.com/render/math?math=\phi_k) for each data point. 
  - For example, if we look at a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_6) = c({1,3},{2},{6,4,5}), then ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,\theta_3,\theta_4,\theta_5,\theta_6) is {![formula](https://render.githubusercontent.com/render/math?math=\phi_a,\phi_b,\phi_a,\phi_c,\phi_c,\phi_c)}. 
+
+If we incorporate the `CRP(α, N)` and the base distribution `G0` to describe the distribution of `θ`, using the recursion, we can get DP! <img src="https://user-images.githubusercontent.com/31917400/74110958-b0ad3c00-4b88-11ea-94f6-721ccb581b96.jpg" />
+
 
 
 'Z' as a label can be 1,2,3,...∞...and follows Multinomial(`π`). `π` is a parameter vector: c(P(Z=1), P(Z=2), ..P(Z=∞)). The hyperparameter vector `α` controls the **"clumpiness"** of the Dirichlet process. The hyperparameter vector `α` yields a parameter vector `π` which is `G(A): the distribution of data in "A" partition`??? -  Can we go with Gaussian??? We carry on DP while the sample dimensionality is not defined yet.
