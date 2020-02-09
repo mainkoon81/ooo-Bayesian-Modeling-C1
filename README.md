@@ -139,11 +139,12 @@ DP is used to determine the probability of all possible labeling (i.e., set part
    - Given a partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), the destination of the next person `n + 1` has the following distribution:  
    <img src="https://user-images.githubusercontent.com/31917400/74105783-cb67bc80-4b58-11ea-9012-20fa99bff2a7.jpg" />
    
-   - Consider we have **partition objects** as many as the total datasize. From CRP(α, N), we can sample a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_N), i.e, we first draw a single partition. Next, for `each tables` within the drawn partition, we draw a parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) i.i.d. from the base distribution ![formula](https://render.githubusercontent.com/render/math?math=G_0). 
+   - Consider we have **partition objects** as many as the total datasize. From CRP(α, N), we can sample a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_N), i.e, we first draw a single partition. 
+   - Next, for `each tables` within the drawn partition, we draw a parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) i.i.d. from the base distribution ![formula](https://render.githubusercontent.com/render/math?math=G_0). 
    - If a data pt ![formula](https://render.githubusercontent.com/render/math?math=x_i) belongs to the table 'K', the data pt will be drawn from some distribution **F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K))** which is parameterized by the corresponding parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K).  
-   <img src="https://user-images.githubusercontent.com/31917400/74106635-687a2380-4b60-11ea-8ea0-18213101bead.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/74106782-5e0c5980-4b61-11ea-8206-e6f3ab3f26a6.jpg" />
 
-
+   - 
 
 
    - Calculate the probability of each probability `π`... to create "prior"
