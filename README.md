@@ -97,7 +97,9 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-DP is used to determine the probability of all possible labeling (i.e., set partitions) of elements to categories. 'Z' as a label can be 1,2,3,...∞...and follows Multinomial(`π`). `π` is a parameter vector: c(P(Z=1), P(Z=2), ..P(Z=∞)). The hyperparameter vector `α` controls the **"clumpiness"** of the Dirichlet process. The hyperparameter vector `α` yields a parameter vector `π` which is `G(A): the distribution of data in "A" partition`??? -  Can we go with Gaussian??? We carry on DP while the sample dimensionality is not defined yet.
+DP is used to determine the probability of all possible labeling (i.e., set partitions) of elements to categories. ![formula](https://render.githubusercontent.com/render/math?math=Z_k) 
+
+'Z' as a label can be 1,2,3,...∞...and follows Multinomial(`π`). `π` is a parameter vector: c(P(Z=1), P(Z=2), ..P(Z=∞)). The hyperparameter vector `α` controls the **"clumpiness"** of the Dirichlet process. The hyperparameter vector `α` yields a parameter vector `π` which is `G(A): the distribution of data in "A" partition`??? -  Can we go with Gaussian??? We carry on DP while the sample dimensionality is not defined yet.
  - We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
  - "We assign base probability(pmf `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...) in Dirichlet"!!!!!!!! Think of the "labels" as a particular random value drawn from the `G(A)`. I.e., all the random variables in a same category share the same value(label), and the values(labels) are distributed according to our chosen base distribution `G(A)`. Now we need to get a control over such **probability assigning mechanism** in Dirichlet. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial probability values(parameters),...thus, we can think of an infinite number of partitions - A1, A2, A3...- on the event space. We need a mechanism that governs such event spaces.  
  - ## key is `Prior` !!!
@@ -130,6 +132,13 @@ DP is used to determine the probability of all possible labeling (i.e., set part
    <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
   
  - ### 2. Chinese-Restaurant-Process scheme:
+   - CRP is a sequence of distributions indexed by K, so it's a distribution over indexed partitions. 
+     - ![formula](https://render.githubusercontent.com/render/math?math=CRP_n) = c(partition, partition, partition, ..) where n = total data size 
+   - CRP(α,K) is a distribution over all k-partitions(distribution) of the labeled set:
+     - CRP(α,k) = c(![formula](https://render.githubusercontent.com/render/math?math=K_1,K_2,...K_k)) 
+   
+   
+   
    - Calculate the probability of each probability `π`... to create "prior"
    - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
