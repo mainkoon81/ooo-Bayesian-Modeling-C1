@@ -167,6 +167,9 @@ So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\p
 Think about the parameter of a mixture model. 
 <img src="https://user-images.githubusercontent.com/31917400/74092657-02898f80-4abf-11ea-90bb-ef529e08ef6e.jpg" />
 
+ - One hurdle we encounter is **sampling from `G`**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
+ - For the sampling algorithm, it is convenient to include  
+
 ### > Implementation
  - Step I. Initial Labeling(assign table) to every point.
  - Step II. While Gibbs Sampling Iteration with each data instance:
