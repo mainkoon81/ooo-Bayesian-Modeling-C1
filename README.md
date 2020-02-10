@@ -124,7 +124,7 @@ So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\p
      - Sol 1) Stick-Breaking scheme(sampling distribution)
      - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
- - ### 1. Stick-Breaking scheme: 
+ - ### [1] Stick-Breaking scheme: 
    - How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
    - Sampling a decent distribution 'G(A)', 
      - Using the "adjusted Beta": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
@@ -136,7 +136,7 @@ So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\p
        - Small Hyperparameter: result in small stick
    <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
   
- - ### 2. Chinese-Restaurant-Process scheme:
+ - ### [2] Chinese-Restaurant-Process scheme:
    - CRP is a sequence of distributions indexed by `K`. Let's say the CRP object is a "partition `π`".
      - partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) = c(distr, distr, distr, ..) where n is a total data_size and each subset element(distribution) within a partition is a restaurant table K.    
    - CRP(α, N) is a distribution over all `N`-partitions of the labeled set:     
