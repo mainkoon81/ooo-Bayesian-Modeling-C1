@@ -102,7 +102,7 @@ DP is used to determine the probability of all possible labeling of elements to 
 
 If we incorporate the `CRP(α, N)` and the base distribution `G0` to describe the distribution of `θ`, using the recursion, we can get DP! <img src="https://user-images.githubusercontent.com/31917400/74172833-d5f18700-4c28-11ea-84a0-725584de646e.jpg" />
 
-So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) which is the parameter value (ex. ![formula](https://render.githubusercontent.com/render/math?math=\mu_K)) that describes the table(cluster). And `θ`(like a mu) follows Dirichlet?    
+So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) which is the parameter value (ex. ![formula](https://render.githubusercontent.com/render/math?math=\mu_K)) that describes the table(cluster). And `θ`(like a mu) follows the distribution that is sampled from the Dirichlet?      
 
 
 'Z' as a label can be 1,2,3,...∞...and follows Multinomial(`π`). `π` is a parameter vector: c(P(Z=1), P(Z=2), ..P(Z=∞)). The hyperparameter vector `α` controls the **"clumpiness"** of the Dirichlet process. The hyperparameter vector `α` yields a parameter vector `π` which is `G(A): the distribution of data in "A" partition`??? -  Can we go with Gaussian??? We carry on DP while the sample dimensionality is not defined yet.
