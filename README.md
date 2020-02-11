@@ -170,7 +170,7 @@ Think about the parameter of a mixture model.
  <img src="https://user-images.githubusercontent.com/31917400/74238858-8bc2e100-4cce-11ea-9d4a-028ad20f205e.jpg" />
 
  - For the sampling algorithm, it is convenient to include table assignment variable `Z` to indicate which table our data pt ![formula](https://render.githubusercontent.com/render/math?math=\x_i) belongs to.  
- <img src="https://user-images.githubusercontent.com/31917400/74238859-8c5b7780-4cce-11ea-95fb-7b0461917df1.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/74239298-7ac69f80-4ccf-11ea-9474-e0eb493dee18.jpg" />
 
 
 
