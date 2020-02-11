@@ -165,10 +165,19 @@ So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\p
 
 ## C. Dirichlet Process Mixture Model   
 Think about the parameter of a mixture model. 
-<img src="https://user-images.githubusercontent.com/31917400/74092657-02898f80-4abf-11ea-90bb-ef529e08ef6e.jpg" />
+ - One hurdle we encounter here is **"sampling from `G`"**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
+ <img src="https://user-images.githubusercontent.com/31917400/74237352-45b84e00-4ccb-11ea-8d63-13615f9ead1d.jpg" />
 
- - One hurdle we encounter is **sampling from `G`**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
- - For the sampling algorithm, it is convenient to include  
+ - For the sampling algorithm, it is convenient to include table assignment variable `Z` to indicate which table our data pt ![formula](https://render.githubusercontent.com/render/math?math=\x_i) belongs to.  
+ <img src="https://user-images.githubusercontent.com/31917400/74237641-eb6bbd00-4ccb-11ea-9171-d11eeb093d59.jpg" />
+
+
+
+
+
+
+
+
 
 ### > Implementation
  - Step I. Initial Labeling(assign table) to every point.
