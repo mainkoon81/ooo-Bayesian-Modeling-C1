@@ -179,6 +179,8 @@ Our Dirichlet Process provides a discrete distribution over objects and take i.i
  - The vector (![formula](https://render.githubusercontent.com/render/math?math=\delta\theta_i(A_1),...\delta\theta_i(A_K))) is an indicator vector for the index `k` such that ![formula](https://render.githubusercontent.com/render/math?math=\theta_i\in%20A_k). And this event (conditioned on G) has probability G(![formula](https://render.githubusercontent.com/render/math?math=A_k)).
    - so ![formula](https://render.githubusercontent.com/render/math?math=A_1,A_2,...A_K) are K different world, and for each world, same ![formula](https://render.githubusercontent.com/render/math?math=\theta_i) can exist with different probability: ![formula](https://render.githubusercontent.com/render/math?math=\delta\theta_i(A_k)). ![formula](https://render.githubusercontent.com/render/math?math=\theta_i) is drawn from **G**. ????? 
  - Thus, this vector(conditioned on G) (![formula](https://render.githubusercontent.com/render/math?math=\delta\theta_i(A_1),...\delta\theta_i(A_K))| G) is a categorical/multinoulli random variable with parameters ![formula](https://render.githubusercontent.com/render/math?math=G(A_1),G(A_2),...G(A_K)). 
+ - And these random parameters ![formula](https://render.githubusercontent.com/render/math?math=G(A_1),G(A_2),...G(A_K)) follow a Dirichlet distribution! This is the primary reason for the name "Dirichlet Process". 
+ <img src="https://user-images.githubusercontent.com/31917400/74276686-170f9700-4d0e-11ea-8445-f4fa64978f99.jpg" />
 
 
 
