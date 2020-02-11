@@ -167,10 +167,10 @@ So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\p
 ## C. Dirichlet Process Mixture Model   
 Think about the parameter of a mixture model. 
  - One hurdle we encounter here is **"sampling from `G`"**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
- <img src="https://user-images.githubusercontent.com/31917400/74237352-45b84e00-4ccb-11ea-8d63-13615f9ead1d.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/74238858-8bc2e100-4cce-11ea-9d4a-028ad20f205e.jpg" />
 
  - For the sampling algorithm, it is convenient to include table assignment variable `Z` to indicate which table our data pt ![formula](https://render.githubusercontent.com/render/math?math=\x_i) belongs to.  
- <img src="https://user-images.githubusercontent.com/31917400/74237790-430a2880-4ccc-11ea-907c-af52397d501a.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/74238859-8c5b7780-4cce-11ea-95fb-7b0461917df1.jpg" />
 
 
 
