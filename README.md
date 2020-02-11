@@ -174,7 +174,8 @@ Think about the parameter of a mixture model.
 
  - We have the joint so perform Gibbs sampling over the state space of {`w`, `Փ`} and {`z`} <img src="https://user-images.githubusercontent.com/31917400/74241108-4359f200-4cd3-11ea-8621-611ed9657be7.jpg" /> At each iteration, we choose one of these variables and re-sample it from its conditional distribution given all the other variables.
 
-
+Our Dirichlet Process provides a discrete distribution over objects and take i.i.d. samples from this distribution. Analogous to the beta-binomial and Dirichlet-multinomial conjugacy, we suspect the **posterior of the DP**, after observe samples, is also a DP. We will make this precise: 
+ - Suppose we have a partition: 
 
 
 
