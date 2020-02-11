@@ -177,7 +177,8 @@ Think about the parameter of a mixture model.
 Our Dirichlet Process provides a discrete distribution over objects and take i.i.d. samples from this distribution. Analogous to the `beta-binomial` and `Dirichlet-multinomial` conjugacy, we suspect the **posterior of the DP**, after observe samples, is also a DP. We will make this precise: 
  - Suppose we have a partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,A_2,...A_K).
  - The vector (![formula](https://render.githubusercontent.com/render/math?math=\delta\theta_i(A_1),...\delta\theta_i(A_K))) is an indicator vector for the index `k` such that ![formula](https://render.githubusercontent.com/render/math?math=\theta_i\in%20A_k). And this event (conditioned on G) has probability G(![formula](https://render.githubusercontent.com/render/math?math=A_k)).
- - 
+   - so ![formula](https://render.githubusercontent.com/render/math?math=A_1,A_2,...A_K) are K different world, and for each world, same ![formula](https://render.githubusercontent.com/render/math?math=\theta_i) can exist with different probability: ![formula](https://render.githubusercontent.com/render/math?math=\delta\theta_i(A_k)). ![formula](https://render.githubusercontent.com/render/math?math=\theta_i) is drawn from **G**.  
+ - Thus, this vector(conditioned on G) is a categorical/multinoulli random variable with parameters ![formula](https://render.githubusercontent.com/render/math?math=G(A_1),G(A_2),...G(A_K)). 
 
 
 
