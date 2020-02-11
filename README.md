@@ -182,6 +182,8 @@ Our Dirichlet Process provides a discrete distribution over objects and take i.i
  - And these random parameters ![formula](https://render.githubusercontent.com/render/math?math=G(A_1),G(A_2),...G(A_K)) follow a Dirichlet distribution! This is the primary reason for the name "Dirichlet Process". 
  <img src="https://user-images.githubusercontent.com/31917400/74276686-170f9700-4d0e-11ea-8445-f4fa64978f99.jpg" />
 
+ - Since the Dirichlet distribution is conjugate to the multinomial distribution, we can have the posterior!
+ <img src="https://user-images.githubusercontent.com/31917400/74277676-dc0e6300-4d0f-11ea-9538-3422cf4ef44d.jpg" />
 
 
 ### > Implementation
