@@ -105,6 +105,12 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
+For the time being, forget about the labeling. What is DP? 
+<img src="https://user-images.githubusercontent.com/31917400/73652179-2d6a8280-467e-11ea-8651-2c115fe2c1e7.png" />
+
+
+
+
 DP is used to determine the `probability of all possible labeling of elements` to categories. Let ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,...\theta_N) be the table(cluster) parameters ![formula](https://render.githubusercontent.com/render/math?math=\phi_k) for each data point. 
  - For example, if we look at a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_6) = c({1,3},{2},{6,4,5}), then ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,\theta_3,\theta_4,\theta_5,\theta_6) is {![formula](https://render.githubusercontent.com/render/math?math=\phi_a,\phi_b,\phi_a,\phi_c,\phi_c,\phi_c)}. 
 
