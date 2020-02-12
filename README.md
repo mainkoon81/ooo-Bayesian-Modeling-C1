@@ -38,6 +38,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - ### **What we want is `π`... Done and Dusted!
    - Idea 01: `**latent variable parameter** can be treated as a random variable.` 
      - "latent variable" distribution = "multinomial" distribution.
+     - What if the size of the "latent variable" goes to infinity???
      - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
      <img src="https://user-images.githubusercontent.com/31917400/73760133-db505c80-4764-11ea-8efa-61a47729f4c7.jpg" />
 
