@@ -33,7 +33,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
 ### Automatic Hyperparameter Estimation? (determining parameter size??) 
  - [Q] From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
- <img src="https://user-images.githubusercontent.com/31917400/73740256-c57c7080-473f-11ea-8bd4-ce698ed37471.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/74344034-e5490f80-4da3-11ea-8dc4-d93de695b377.jpg" />
 
    - ### **What we want is `π`... Done and Dusted!
    - Idea 01: `**latent variable parameter** can be treated as a random variable.` 
