@@ -36,28 +36,35 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  <img src="https://user-images.githubusercontent.com/31917400/74344034-e5490f80-4da3-11ea-8dc4-d93de695b377.jpg" />
 
    - ### **What we want is `π`... Done and Dusted!
-   - Idea 01: `**Parameter in latent variable** can be treated as a random variable.` 
+     - Just focus on **π**!
+     - ![formula](https://render.githubusercontent.com/render/math?math=Z_k~Multi(\pi_k)) : `Likelihood`
+     - ![formula](https://render.githubusercontent.com/render/math?math=\pi_k~Dir(\alpha_1,\alpha_1,..\alpha_k)) : `Prior`
+     - So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end.
+     - But.. how are you gonna deal with **`α`**? 
+     
+   - [Idea 01]: `**Parameter in latent variable** can be treated as a random variable.` 
      - "latent variable" distribution = "multinomial" distribution.
      - What if the size of the "latent variable" goes to infinity???
      - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
      <img src="https://user-images.githubusercontent.com/31917400/73760133-db505c80-4764-11ea-8efa-61a47729f4c7.jpg" />
 
-   - Idea 02: `**latent variable parameter value** can be controlled by data! but how to address **α**? `
+   - [Idea 02]: `**latent variable parameter value** can be controlled by data! but how to address **α**? `
      - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)!
      - We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! However, their occurance is not accurate? How to address the hyperparameter α that affects the sampling result ??? 
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
 
-   - Idea 03: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
+   - [Idea 03]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
      - [Note] Random Variable: RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
        - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
-     - [Note] Random(stochastic) Process: Random process is an infinite labeled collection of random variables. Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we can’t determine with full confidence what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. Think of a stochastic process as how smoke particles collide with each other. Their unpredictable movements and collisions are random and are referred to as Brownian Motion. Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.
+     - [Note] Random(stochastic) Process: Random process is an infinite labeled collection of random variables. Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can’t determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. 
+       - Think of a stochastic process as how smoke particles collide with each other. Their unpredictable movements and collisions are random and are referred to as Brownian Motion. Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.
        - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P,  
      
-     - parameter size VS parameter value ???
-       - if you know parameter size`t`, then you can expect the parameter value`w` distribution?.    
-       - if you know parameter value`w`, then you can expect the data distribution?.
+     - parameter size VS parameter value ????????
+       - if you know parameter size`t`, then you can expect the parameter value`w` distribution?????    
+       - if you know parameter value`w`, then you can expect the data distribution?????
      - Random(Stochastic) Process refers to the infinitely labeled(infinitely hyperparameterized) collection of random variables.
-     - With the passage of time(infinite hyper-parameter)`t`?? , the outcomes(resulting parameter)`w`?? of a certain experiment will change...
+     - With the passage of time(infinite hyper-parameter)`t`?????? , the outcomes(resulting parameter)`w`?? of a certain experiment will change...?????
      <img src="https://user-images.githubusercontent.com/31917400/73839150-32aa0780-480d-11ea-9baa-3e9f4a6c712f.jpg" />
 
      - ## **But how Random Process can deal with infinite hyper-parameter?
