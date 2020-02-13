@@ -124,7 +124,7 @@ Now we use DP to determine the `probability of all possible labeling of elements
  - We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `π`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. The hyperparameter vector `α` controls the **"clumpiness"** of the Dirichlet process. But how are you gonna control the **hyperparameter `α`** in Dirichlet?
    - "We assign base probability(pmf `G0` or `H` which is `E[G(?)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...) in Dirichlet"!
    - Think of the "labels" as a particular random value drawn from the `G(A)`. i.e., all the random variables in a same category share the same value(label), and the values(labels) are distributed according to our chosen base distribution `G(A)`. Now we need to get a control over such **probability assigning mechanism** in Dirichlet. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial probability values(parameters),...thus, we can think of an infinite number of partitions - A1, A2, A3... 
- - ## key is `Prior` !!!
+ - ## key is in `Prior` !!!
  - At the end of the day, the hyperparameter control(probability space partitioning to assign to hyperparameter) can be done by manipulating "prior" (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable parameter `π` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
    - Although our initial **hyperparameter `α`** in the prior `Dir(α)` is rubbish,  
      - By building up some `"function"` inside of **hyperparameter `α`**  in `Dir(α)`, 
