@@ -110,7 +110,7 @@ Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 <img src="https://user-images.githubusercontent.com/31917400/74434539-8a262400-4e5a-11ea-828b-6a56b9744073.jpg" />
 
 For the time being, forget about the labeling. What is DP in general? 
-<img src="https://user-images.githubusercontent.com/31917400/74390463-451dd580-4df9-11ea-8171-89f209e81412.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/74436408-4fbe8600-4e5e-11ea-9e47-5c2028f6489d.jpg" />
 
 Why G0?
  - For example, let ![formula](https://render.githubusercontent.com/render/math?math=G_0)∼N(0,1) and **α** be an arbitrary positive number. In this case, since the base distribution is a Gaussian, **we are sampling a new cluster** from the Gaussian. 
