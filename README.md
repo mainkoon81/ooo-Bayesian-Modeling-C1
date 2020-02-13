@@ -133,7 +133,7 @@ Now we use DP to determine the `probability of all possible labeling of elements
      - By iterating and updating the prior `Dir(α)`, introducing new datepoints, 
    - we can get a control over **hyperparameter `α`**. 
    - but what `function`?
-<img src="https://user-images.githubusercontent.com/31917400/74084847-0095e100-4a6b-11ea-9c01-a3101f6f902a.png" />
+<img src="https://user-images.githubusercontent.com/31917400/74458162-3549d400-4e81-11ea-83d8-1049cf18dea0.png" />
 
  - The output of the Dirichlet (which is a parameter values) can also have a form of "function".
  - Sampling the output "function" from prior: DP(`α`, `H`)
@@ -172,7 +172,7 @@ Now we use DP to determine the `probability of all possible labeling of elements
    - At first glance, this model does not seem any different from a finite mixture model. However,the difference lies in the behavior as N(# of partitions you have) grows: here, the number of tables(and hence table parameters φ) will grow with N, which does not occur in a finite mixture model. This is the essence of the "non-parametric" aspect.
    - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
-   <img src="https://user-images.githubusercontent.com/31917400/74086626-7f474a00-4a7c-11ea-86ec-a6514261257b.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/74458192-3ed33c00-4e81-11ea-928c-8d06879909de.jpg" />
 
 
 
