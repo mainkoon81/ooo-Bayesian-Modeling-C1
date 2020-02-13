@@ -30,8 +30,9 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - Total sum of `θ_i` is 1.
 <img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
 
-### Automatic Hyperparameter Estimation? (determining parameter size??) 
- - [Q] From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
+### Question! 
+ - Automatic Hyperparameter Estimation? (determining parameter size??) 
+ - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/74344034-e5490f80-4da3-11ea-8dc4-d93de695b377.jpg" />
 
