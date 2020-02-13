@@ -35,7 +35,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/74344034-e5490f80-4da3-11ea-8dc4-d93de695b377.jpg" />
 
-   - ### **What we want is `π`... Done and Dusted!
+   - ### **What we want is `π`... Done and Dusted!..what about `μ` and `Σ`?
      - Just focus on **π**!
      - ![formula](https://render.githubusercontent.com/render/math?math=Z_k~Multi(\pi_k)) : `Likelihood`
      - ![formula](https://render.githubusercontent.com/render/math?math=\pi_k~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior`
