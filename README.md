@@ -112,6 +112,11 @@ Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 For the time being, forget about the labeling. What is DP in general? 
 <img src="https://user-images.githubusercontent.com/31917400/74390463-451dd580-4df9-11ea-8171-89f209e81412.jpg" />
 
+Why G0?
+ - For example, let ![formula](https://render.githubusercontent.com/render/math?math=G_0)∼N(0,1) and **α** be an arbitrary positive number. In this case, since the base distribution is a Gaussian, we will sample from the Gaussian **when we sample a new cluster**. 
+   - If we sample multiple distributions from the DP, the average of the whole process will be the Gaussian: `E[G(A)] = N(0,1)`. 
+   - **α** also plays an interesting role: The variance of the DP will be smaller as we choose a larger **α**. 
+
 Now we use DP to determine the `probability of all possible labeling of elements` to categories. Let ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,...\theta_N) be the table(cluster) parameters ![formula](https://render.githubusercontent.com/render/math?math=\phi_k) for each data point. 
  - For example, if we look at a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_6) = c({1,3},{2},{6,4,5}), then ![formula](https://render.githubusercontent.com/render/math?math=\theta_1,\theta_2,\theta_3,\theta_4,\theta_5,\theta_6) is {![formula](https://render.githubusercontent.com/render/math?math=\phi_a,\phi_b,\phi_a,\phi_c,\phi_c,\phi_c)}. 
 
