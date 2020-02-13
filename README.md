@@ -105,8 +105,8 @@ plt.plot(X_test, f_prior)
 
 -------------------------------------------------------------------------------------------------
 ## B. Dirichlet Process and hyperparameter estimation???
-Multinomial Distribution is your samples?? Data pt labeling? `Z`?
-<img src="https://user-images.githubusercontent.com/31917400/74429280-927a6100-4e52-11ea-97d2-59a38fa85a7f.jpg" />
+Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
+<img src="https://user-images.githubusercontent.com/31917400/74430880-a8d5ec00-4e55-11ea-890a-5afabe7184c3.jpg" />
 
 For the time being, forget about the labeling. What is DP in general? 
 <img src="https://user-images.githubusercontent.com/31917400/74390463-451dd580-4df9-11ea-8171-89f209e81412.jpg" />
