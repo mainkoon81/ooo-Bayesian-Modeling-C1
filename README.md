@@ -194,7 +194,7 @@ So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\p
 
 
    
-Inference:
+## Inference:
  - The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling. Let's say..given the previous partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), we remove one data pt `x` from the partition (prior) then re-added to the partition (likelihood) to obtain posterior: **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|`x`)**. This gives **new partition** (prior)! 
    - de Finetti's theorem + GibbsSampling
      - The exechangeability is important coz...
