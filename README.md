@@ -114,6 +114,7 @@ For the time being, forget about the labeling. What is DP in general?
 
 Why G0?
  - `G0` is the mean of **DP(α, `G0`)**
+ - `α` controls the concentration arount the mean (larger α makes the concentration tighter). 
  - For example, let ![formula](https://render.githubusercontent.com/render/math?math=G_0)∼N(0,1) and **α** be an arbitrary positive number. In this case, since the base distribution is a Gaussian, **we are sampling a new cluster** from the Gaussian. 
    - If we sample multiple distributions from the DP, the **average of the whole process** will be the Gaussian: `E[G(A)] = N(0,1) = G0`. 
    - **α** also plays an interesting role: The variance of the DP will be smaller as we choose a larger **α**. 
