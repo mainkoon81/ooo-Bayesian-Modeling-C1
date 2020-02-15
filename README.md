@@ -113,7 +113,7 @@ For the time being, forget about the labeling. What is DP in general?
 <img src="https://user-images.githubusercontent.com/31917400/74437083-7204d380-4e5f-11ea-8908-7f55fc8449de.jpg" />
 
 ### What is DP?
- -: 
+For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **joint of the random vector**: (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) is a **K-dimensional Dirichlet distribution** with parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). 
 
 ### Why G0?
  - `G0` is the mean of **DP(α, `G0`)**
