@@ -116,9 +116,10 @@ For the time being, forget about the labeling. What is DP in general?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **joint of the random vector**: (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) is a **K-dimensional Dirichlet distribution** with parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). 
 
 ### Why you want "G"?
+G is a CDF???? 
 
 ### Why G0?
- - `G0` is the mean of **DP(α, `G0`)**
+ - `G0` is the mean of **DP(α, `G0`)**. It's a centering distribution.
  - `α` controls the concentration arount the mean (larger α makes the concentration tighter). 
  - For example, let ![formula](https://render.githubusercontent.com/render/math?math=G_0)∼N(0,1) and **α** be an arbitrary positive number. In this case, since the base distribution is a Gaussian, **we are sampling a new cluster** from the Gaussian. 
    - If we sample multiple distributions from the DP, the **average of the whole process** will be the Gaussian: `E[G(A)] = N(0,1) = G0`. 
@@ -212,7 +213,9 @@ The main goal of clustering is to find the posterior distribution **P(![formula]
      <img src="https://user-images.githubusercontent.com/31917400/74452857-86ee6080-4e79-11ea-8676-5b0357881917.jpg" />
 
 ## C. Dirichlet Process Mixture Model   
-Think about the parameter of a mixture model. DP gives a cdf while DPM gives a density.  
+Think about the parameter of a mixture model. A natural way to increase the applicability of DP-based modeling is by using the DP as a prior for the mixing distribution in a mixture model with a parametric kernel distribution. 
+
+DP gives a cdf while DPM gives a density.  
  - One hurdle we encounter here is **"sampling from `G`"**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
  <img src="https://user-images.githubusercontent.com/31917400/74478537-7bb12a00-4ea5-11ea-890a-3428ddab3a7b.jpg" />
 
