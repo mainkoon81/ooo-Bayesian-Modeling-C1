@@ -212,7 +212,7 @@ The main goal of clustering is to find the posterior distribution **P(![formula]
      <img src="https://user-images.githubusercontent.com/31917400/74452857-86ee6080-4e79-11ea-8676-5b0357881917.jpg" />
 
 ## C. Dirichlet Process Mixture Model   
-Think about the parameter of a mixture model. 
+Think about the parameter of a mixture model. DP gives a cdf while DPM gives a density.  
  - One hurdle we encounter here is **"sampling from `G`"**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
  <img src="https://user-images.githubusercontent.com/31917400/74478537-7bb12a00-4ea5-11ea-890a-3428ddab3a7b.jpg" />
 
