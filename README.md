@@ -213,7 +213,7 @@ The main goal of clustering is to find the posterior distribution **P(![formula]
      <img src="https://user-images.githubusercontent.com/31917400/74452857-86ee6080-4e79-11ea-8676-5b0357881917.jpg" />
 
 ## C. Dirichlet Process Mixture Model   
-Think about the parameter of a mixture model. A natural way to increase the applicability of DP-based modeling is by using the DP as a prior for the mixing distribution in a mixture model with a parametric kernel distribution. 
+**G** from DP is discrete with probability "1", thus DP would not be a suitable prior distribution for the situations with continuous data coz in this case, we want continuous **G**. Let's think about mixture models. Mixture models are widely used for **density estimation** and classification problem. A natural idea is to create a prior for continuous densities via a mixture where the mixing distribution is given a Dirichlet process prior. As a natural way to increase the applicability of DP-based modeling,  we can use DP as a prior for the mixing distribution in a mixture model with a parametric kernel distribution. 
 
 DP gives a cdf while DPM gives a density.  
  - One hurdle we encounter here is **"sampling from `G`"**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
