@@ -67,9 +67,23 @@ parameter size VS parameter value ????????
    - With the passage of time(infinite hyper-parameter)`t`?????? , the outcomes(resulting parameter)`w`?? of a certain experiment will change...?????
    <img src="https://user-images.githubusercontent.com/31917400/73839150-32aa0780-480d-11ea-9baa-3e9f4a6c712f.jpg" />
 
-**But how Random Process can deal with infinite hyper-parameter?**
+> **But how Random Process can deal with infinite hyper-parameter?**
 
 ### Random process is a collection of random variables labeled(indexed) by `t`.  
+ - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
+ - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
+   <img src="https://user-images.githubusercontent.com/31917400/75095676-58663900-558f-11ea-953e-0a58b2edc53c.jpg" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
