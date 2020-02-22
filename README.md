@@ -55,22 +55,28 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
 
    - [Idea 03]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
-     - [Note] Random Variable: RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
-       - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
-     - [Note] Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can’t determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. `Random process is an infinite labeled collection of random variables??????? Bruna..is it correct?` 
-       - Think of a stochastic process as how smoke particles collide with each other. Their unpredictable movements and collisions are random and are referred to as Brownian Motion. Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.
-       - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P,  
-     
-     - parameter size VS parameter value ????????
-       - if you know parameter size`t`, then you can expect the parameter value`w` distribution?????    
-       - if you know parameter value`w`, then you can expect the data distribution?????
-     - Random(Stochastic) Process refers to the infinitely labeled(infinitely hyperparameterized) collection of random variables.
-     - With the passage of time(infinite hyper-parameter)`t`?????? , the outcomes(resulting parameter)`w`?? of a certain experiment will change...?????
-     <img src="https://user-images.githubusercontent.com/31917400/73839150-32aa0780-480d-11ea-9baa-3e9f4a6c712f.jpg" />
+     - > Note: Random Variable & Random Process
+       - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
+         - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
+       - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc...
 
-     - ## **But how Random Process can deal with infinite hyper-parameter?
+parameter size VS parameter value ????????
+ - if you know parameter size`t`, then you can expect the parameter value`w` distribution?????    
+ - if you know parameter value`w`, then you can expect the data distribution?????
+   - Random(Stochastic) Process refers to the infinitely labeled(infinitely hyperparameterized) collection of random variables.
+   - With the passage of time(infinite hyper-parameter)`t`?????? , the outcomes(resulting parameter)`w`?? of a certain experiment will change...?????
+   <img src="https://user-images.githubusercontent.com/31917400/73839150-32aa0780-480d-11ea-9baa-3e9f4a6c712f.jpg" />
+
+**But how Random Process can deal with infinite hyper-parameter?**
+
+### Random process is a collection of random variables labeled(indexed) by `t`.  
+
+
+
+
+
+
 --------------------------------------------------------------------------------------------------------------------
-
 ## A. Gaussian Process and Non-linear Problem
 For any set `S`, **GP on `S`** refers to a bunch of random variables(pdf functions: `f(x)`) whose index (`x`) is the member of the set `S` such that they can have the following properties: The bunch of variables(pdf functions: `f(x)`) are normally multivariate distributed, thus GP outputs from the mean function and cov function(a.k.a kernel function)!  
 
