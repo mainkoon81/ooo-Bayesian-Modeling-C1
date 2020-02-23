@@ -9,7 +9,7 @@ Non-parametric Bayesian Model
 
  - Using kernel? 
    - weighing neighbor points by the distance to our ![formula](https://render.githubusercontent.com/render/math?math=x_i). The point that are really neighbor to our ![formula](https://render.githubusercontent.com/render/math?math=x_i) have the higher weight and the points that are far away have lower weights.
-   - The weight can be computed as the **kernel function** of "x", `the point where we want to predict` and ![formula](https://render.githubusercontent.com/render/math?math="x_i"), the position of the `i`th point. 
+   - The weight can be computed as the **kernel function** of "x", `the point where we want to predict` and ![formula](https://render.githubusercontent.com/render/math?math=x_i), the position of the `i`th point. 
   <img src="https://user-images.githubusercontent.com/31917400/75101791-4a89d580-55da-11ea-90ee-12fe9d06da77.jpg" />
 
    - In Gaussian kernel, if we take a higher value of sigma, the values would drop slower obviously, so you can weight further points a bit higher...getting closer to Uniform?  If sigma is low then the kernel would quickly drop to zero, so each point can get extreme weight. 
