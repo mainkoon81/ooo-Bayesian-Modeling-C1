@@ -3,8 +3,8 @@ Non-parametric Bayesian Model
  - GP
  - DP
 
-## Background Study
-### > Gaussian Story
+# Background Study
+## > Gaussian Story
 <img src="https://user-images.githubusercontent.com/31917400/73613995-07e46700-45f3-11ea-8760-6ae349c15dd8.png" />
 
  - Using kernel? 
@@ -12,14 +12,14 @@ Non-parametric Bayesian Model
    - The weight can be computed as the **kernel function** of "x" (`the x value for the point(y) that we want to predict`) and ![formula](https://render.githubusercontent.com/render/math?math=x_i) (the position of the `i`th neighbor point). 
    - In Gaussian kernel, if we take a higher value of sigma, the values would drop slower obviously, so you can weight further points a bit higher...getting closer to Uniform?  If sigma is low then the kernel would quickly drop to zero, so each point can get extreme weight. 
    - In Uniform kernel, we equally weigh the points. 
-   <img src="https://user-images.githubusercontent.com/31917400/75101791-4a89d580-55da-11ea-90ee-12fe9d06da77.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/75113588-1ac4e700-5647-11ea-9ccd-577e091f44b2.jpg" />
 
 ### Why use kernel?
 classification(svm), regression(knn), weighting neighboring points,...smoothing histogram,...creating customized feature space,... 
 
 
 
-### > Dirichlet Story
+## > Dirichlet Story
 ### Dirichlet eats `α` and spits `θ`!
 Dirichlet Distribution is a distribution on multinomial pmf. It is a generalized beta distribution. 
 <img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
@@ -87,10 +87,11 @@ parameter size VS parameter value ???
    - With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?  
 
 --------------------------------------------------------------------------------------------------------------------
-## A. Gaussian Process and Non-linear Problem
-For any set `S`, **GP on `S`** refers to a bunch of random variables(pdf functions: `f(x)`) whose index (`x`) is the member of the set `S` such that they can have the following properties: The bunch of variables(pdf functions: `f(x)`) are normally multivariate distributed, thus GP outputs from the mean function and cov function(a.k.a kernel function)!  
+# A. Gaussian Process and Non-linear Problem
+**GP** on `S` refers to a bunch of random variables(with pdf: `f(x)`) on `S`... whose index is the member of the set `S` such that they can have the following properties: The bunch of variables ![formula](https://render.githubusercontent.com/render/math?math=x_n) with pdf functions: f(![formula](https://render.githubusercontent.com/render/math?math=x_n)) are normally multivariate distributed, thus GP outputs from the **mean function** and **cov function (kernel function)**! Gaussian process is parameterized by the `mean vector` and the `covariance matrix`.
+<img src="https://user-images.githubusercontent.com/31917400/75113589-1c8eaa80-5647-11ea-80f4-1a39538a185d.jpg" /> 
 
-It is a distribution over functions. 
+**GP** is a distribution over functions. 
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
 To make the prediction, take the point (x, f(x)), then try to generate the mean and CI(or cov): Given that having training set, I try to combine the data with the prior of the functions(with mean and cov)..to make my functions smooth. Use a similarity matrix such that our function approximator makes the two points close by when we fit new data to make sure the two hights are also close by.    
@@ -121,7 +122,7 @@ plt.plot(X_test, f_prior)
 
 
 -------------------------------------------------------------------------------------------------
-## B. Dirichlet Process and hyperparameter estimation???
+# B. Dirichlet Process and hyperparameter estimation???
 Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 <img src="https://user-images.githubusercontent.com/31917400/74434539-8a262400-4e5a-11ea-828b-6a56b9744073.jpg" />
 
