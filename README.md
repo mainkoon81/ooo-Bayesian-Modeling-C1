@@ -15,7 +15,7 @@ Non-parametric Bayesian Model
    <img src="https://user-images.githubusercontent.com/31917400/75113588-1ac4e700-5647-11ea-9ccd-577e091f44b2.jpg" />
 
 ### Why use kernel?
-classification(svm), regression(knn), weighting neighboring points,...smoothing histogram,...creating customized feature space,...giving customized samples in the random process?,... 
+classification(svm), regression(knn), weighting neighboring points,...smoothing histogram,...creating customized feature space,...giving customized samples(behaving as the covariance) in the random process,...
 
 
 
@@ -90,6 +90,9 @@ parameter size VS parameter value ???
 # A. Gaussian Process and Non-linear Problem
 **GP** on `S` refers to a bunch of random variables(with pdf: `f(x)`) on `S`... whose index is the member of the set `S` such that they can have the following properties: The bunch of variables ![formula](https://render.githubusercontent.com/render/math?math=x_n) with pdf functions: f(![formula](https://render.githubusercontent.com/render/math?math=x_n)) are normally multivariate distributed, thus GP outputs from the **mean function** and **cov function (kernel function)**! Gaussian process is parameterized by the `mean vector` and the `covariance matrix`.
 <img src="https://user-images.githubusercontent.com/31917400/75114525-89597300-564e-11ea-8411-2da2243a421d.jpg" /> 
+
+Kernel gives customized samples in the random process ? 
+<img src="https://user-images.githubusercontent.com/31917400/75114699-439daa00-5650-11ea-962d-608bb877a093.jpg" /> 
 
 **GP** is a distribution over functions. 
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
