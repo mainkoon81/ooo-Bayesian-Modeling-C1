@@ -15,7 +15,7 @@ Non-parametric Bayesian Model
    <img src="https://user-images.githubusercontent.com/31917400/75101791-4a89d580-55da-11ea-90ee-12fe9d06da77.jpg" />
 
 ### Why use kernel?
-classification(svm), regression(knn), ..., smoothing histogram,... 
+classification(svm), regression(knn), weighting neighboring points,...smoothing histogram,...creating customized feature space,... 
 
 
 
