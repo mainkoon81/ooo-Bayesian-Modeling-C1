@@ -79,7 +79,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
    <img src="https://user-images.githubusercontent.com/31917400/75098914-a0975280-55b3-11ea-87d0-36d4c843580e.jpg" />
 
-# > **But how Random Process can deal with infinite hyper-parameter?**
+> ## But how Random Process can deal with infinite hyper-parameter?
 parameter size VS parameter value ???
  - Run the experiments by each parameter size...denoted by `t`.  
  - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
