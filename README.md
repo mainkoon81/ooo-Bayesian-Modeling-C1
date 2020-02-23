@@ -17,9 +17,12 @@ Non-parametric Bayesian Model
    - In Uniform kernel, we equally weigh the points. 
    <img src="https://user-images.githubusercontent.com/31917400/75113588-1ac4e700-5647-11ea-9ccd-577e091f44b2.jpg" />
 
-### Why use kernel?
-classification(svm), regression(knn), weighting neighboring points,...smoothing histogram,...creating customized feature space,...giving customized samples(behaving as the covariance) in the random process,...
-
+### Why use kernel ??????????
+ - classification(svm): creating customized feature space
+ - regression(knn): weighting neighboring points
+ - otheres: smoothing histogram(kde),...giving customized samples(behaving as the covariance) in the random process
+ - a kernel is a weighting function..by calculating each kernel value for each data point. 
+ - ??????????????????????????
 
 
 ## > Dirichlet Story
