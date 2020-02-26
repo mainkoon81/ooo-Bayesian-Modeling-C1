@@ -97,7 +97,7 @@ parameter size VS parameter value ???
  - Run the experiments by each parameter size...denoted by `t`.  
  - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
    - Random(Stochastic) Process refers to the infinite `t` (infinitely hyperparameterized) collection of random variables.
-   - With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?  
+   - ## With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?  
 
 --------------------------------------------------------------------------------------------------------------------
 # A. Gaussian Process and Non-linear Problem
