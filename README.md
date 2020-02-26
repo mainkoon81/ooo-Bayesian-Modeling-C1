@@ -68,11 +68,11 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
        - In Gaussian Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..
        - In Dirichlet Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..     
      - Gaussian Mixture vs Dirichlet Mixture
-       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(\mu_k,\Sigma_k)): `Likelihood` (This is for Gaussian Mixture)
-       - ![formula](https://render.githubusercontent.com/render/math?math=\mu_k,\Sigma_k~NormaInverseWishart(\mu_0,\kappa_0,\nu_0,\nu_0\Sigma_0)): `prior` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(Z_k)): `Likelihood` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=((\mu_1,\Sigma_1),(\mu_2,\Sigma_2),..),~NormaInverseWishart(\mu_0,\kappa_0,\nu_0,\nu_0\Sigma_0)): `prior` (This is for Gaussian Mixture)
        - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
        - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_k)) : `Prior` (This is for Dirichlet Mixture) 
-       - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end. Done and dusted! We now have the model describing our data! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ???
+       - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable with the help of sampling `θ` from Dirichlet prior! So it seems we can easily get the posterior, thus our `θ` ("mixing coefficients" or "obv-proportion" for every Gaussians) at the end. Done and dusted! We now have the model describing our data! Wait! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ?
        <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
      
    - ### How are you gonna deal with **`α`** and what if `k` goes to infinity? 
