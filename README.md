@@ -58,12 +58,13 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  - Automatic Hyperparameter Estimation? (determining parameter size??) 
  - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
- <img src="https://user-images.githubusercontent.com/31917400/74344034-e5490f80-4da3-11ea-8dc4-d93de695b377.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/75347710-3fb09880-5899-11ea-8387-ced52ed8936a.jpg" />
 
    - ### **What we want is `π`... Done and Dusted!..what about `μ` and `Σ`?
      - Just focus on **π**!
-     - ![formula](https://render.githubusercontent.com/render/math?math=Z_k~Multi(\pi_k)) : `Likelihood`
-     - ![formula](https://render.githubusercontent.com/render/math?math=\pi_k~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior`
+     - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a case!
+     - ![formula](https://render.githubusercontent.com/render/math?math=\theta_k~Multi(\pi_k)) : `Likelihood`
+     - ![formula](https://render.githubusercontent.com/render/math?math=Z_k~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior`
      - So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end.
      - But.. how are you gonna deal with **`α`** and what if `k` goes to infinity? 
      
