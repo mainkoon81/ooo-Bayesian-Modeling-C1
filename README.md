@@ -69,7 +69,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      - So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end.
      - But.. how are you gonna deal with **`α`** and what if `k` goes to infinity? 
      
-   - [Idea 01]: `**latent variable parameter value** can be controlled by data! but how to address **α**? `
+   - [Idea 01]: `**latent variable situation** can be controlled by data! but how to address **α**? `
      - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)!
      - We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! However, their occurance is not accurate? How to address the hyperparameter α that affects the sampling result ??? 
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
