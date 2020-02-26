@@ -69,18 +69,12 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      - So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end.
      - But.. how are you gonna deal with **`α`** and what if `k` goes to infinity? 
      
-   - [Idea 01]: `**Parameter in latent variable** can be treated as a random variable.` 
-     - "latent variable" distribution = "multinomial" distribution.
-     - What if the size of the "latent variable" goes to infinity???
-     - Let's make the **parameter** of the latent variable **`"Random Variable"`** by sampling from Dirichlet(α). We can generate or vary the **parameter** for our latent variable distribution, **using Dirichlet(distribution over multinomial)** because Dirichlet is the best way to generate parameters for multinomial distribution. 
-     <img src="https://user-images.githubusercontent.com/31917400/73760133-db505c80-4764-11ea-8efa-61a47729f4c7.jpg" />
-
-   - [Idea 02]: `**latent variable parameter value** can be controlled by data! but how to address **α**? `
+   - [Idea 01]: `**latent variable parameter value** can be controlled by data! but how to address **α**? `
      - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)!
      - We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! However, their occurance is not accurate? How to address the hyperparameter α that affects the sampling result ??? 
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
 
-   - [Idea 03]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
+   - [Idea 02]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
      - > Note: Random Variable & Random Process
        - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
          - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
