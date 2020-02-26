@@ -65,10 +65,12 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
      - 2.Collection of the cluster proportions `π`
        - Here, just focus on **π**: obv-proportions for the membership "Z". 
        - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\mu_i,\Sigma_i))
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a random clustering case..so it can vary! Z,Z,Z,Z,...
-       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(\theta_k,\Sigma_k)): `Likelihood` (This is for Gaussian Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..
+     - Gaussian Mixture  vs Dirichelet Mixture
+       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(\mu_k,\Sigma_k)): `Likelihood` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_k~idk..some?): `prior` (This is for Gaussian Mixture)
        - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior` (This is for Dirichlet Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_k)) : `Prior` (This is for Dirichlet Mixture) 
      - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end. Done and dusted! We now have the model describing our data! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ???
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
      
