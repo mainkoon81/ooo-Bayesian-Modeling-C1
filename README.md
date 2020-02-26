@@ -61,11 +61,11 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
  <img src="https://user-images.githubusercontent.com/31917400/75390560-5cbc8a00-58e0-11ea-931d-6edafda8444c.jpg" />
 
    - ### The membership "Z" can be expressed in two ways: 
-     - 1) collection of the cluster parameters `μ` and `Σ` 
-     - 2) collection of the cluster proportions `π`
+     - 1.Collection of the cluster parameters `μ` and `Σ` 
+     - 2.Collection of the cluster proportions `π`
        - Here, just focus on **π**: obv-proportions for the membership "Z". 
-       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\mu_i,Sigma_i))
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a clustering case!
+       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\mu_i,\Sigma_i))
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a random clustering case..so it can vary! Z,Z,Z,Z,...
        - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(\theta_k,\Sigma_k)): `Likelihood` (This is for Gaussian Mixture) 
        - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
        - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior` (This is for Dirichlet Mixture) 
