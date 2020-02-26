@@ -63,6 +63,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - ### **What we want is `π`... Done and Dusted!..what about `μ` and `Σ`?
      - Just focus on **π**!
      - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a case!
+     - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\theta_i))
      - ![formula](https://render.githubusercontent.com/render/math?math=\theta_k~Multi(\pi_k)) : `Likelihood`
      - ![formula](https://render.githubusercontent.com/render/math?math=Z_k~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior`
      - So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end.
