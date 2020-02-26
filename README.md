@@ -60,26 +60,25 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/75390560-5cbc8a00-58e0-11ea-931d-6edafda8444c.jpg" />
 
-   - ### **What we want is `π`... Done and Dusted!..what about `μ` and `Σ`?
-     - Just focus on **π**!
-     - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\theta_i))
-     - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a clustering case!
-     - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(\theta_k,\Sigma_k)) 
-     - ![formula](https://render.githubusercontent.com/render/math?math=\theta_k~Multi(\pi_k)) : `Likelihood` ???????? (If k goes to infinity, it becomes Normal approximation to the multinomial??) 
-     - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior`
-     - So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end.
-     - But.. how are you gonna deal with **`α`** and what if `k` goes to infinity? 
-     
-   - [Idea 01]: `**latent variable situation** can be controlled by data! but how to address **α**? `
-     - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)!
-     - We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! However, their occurance is not accurate? How to address the hyperparameter α that affects the sampling result ??? 
+   - ### The membership "Z" can be expressed in two ways: 
+     - 1) collection of the cluster parameters `μ` and `Σ` 
+     - 2) collection of the cluster proportions `π`
+       - Here, just focus on **π**: obv-proportions for the membership "Z". 
+       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\mu_i,Sigma_i))
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a clustering case!
+       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(\theta_k,\Sigma_k)): `Likelihood` (This is for Gaussian Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_K)) : `Prior` (This is for Dirichlet Mixture) 
+     - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable parameters `π` with the help of sampling `π` from Dirichlet prior! So it seems we can easily get the posterior, thus our `π` (mixing coefficients for every Gaussians) at the end. Done and dusted! We now have the model describing our data! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ???
      <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
-
-   - [Idea 02]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
-     - > Note: Random Variable & Random Process
-       - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
-         - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
-       - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc... Markov Chain is also random process(resulting random ouput) in which the effect of the past on the future is only summarized by the current state.  
+     
+   - ### How are you gonna deal with **`α`** and what if `k` goes to infinity? 
+   
+[Idea]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
+> Note: Random Variable & Random Process
+ - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
+   - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
+ - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc... Markov Chain is also random process(resulting random ouput) in which the effect of the past on the future is only summarized by the current state.  
 
 ### Random process is a collection of random variables labeled(indexed) by `t`.  
  - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
