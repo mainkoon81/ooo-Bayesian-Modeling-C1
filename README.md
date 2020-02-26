@@ -140,7 +140,7 @@ Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 <img src="https://user-images.githubusercontent.com/31917400/74434539-8a262400-4e5a-11ea-828b-6a56b9744073.jpg" />
 
 For the time being, forget about the labeling. What is DP in general? 
-<img src="https://user-images.githubusercontent.com/31917400/74591237-19c00400-500e-11ea-8a7a-6188138d9415.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/75351614-53133200-58a0-11ea-8215-b58fb900c64a.jpg" />
 
 ### What is DP?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **joint of the random vector**: (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) is a **K-dimensional Dirichlet distribution** with parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). 
