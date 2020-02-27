@@ -167,12 +167,17 @@ We want to get a control over our latent variable. The latent variable dimension
 So far, we have discussed what is DP. 
 
 ### How to decide the membership of new data pt? 
-At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior. We want to sample the "function" **G**(`θ` distribution as a "clustering example") from prior: DP(`α`, `G0`). First, let's construct the DP prior, using Non-parametric **prior construction** scheme. 
- - Sol 1) Stick-Breaking scheme(sampling distribution)
- - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
+At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior, i.e. We want to sample the "function" **G**(`θ` distribution as a "clustering example") from prior: DP(`α`, `G0`). 
+<img src="https://user-images.githubusercontent.com/31917400/75469279-a495ec80-5986-11ea-8a39-f66d176a9270.jpg" />
+
+We can construct the DP prior, using Non-parametric **prior construction** scheme, then assign a membership to new data.  
+ - Sol 1) Stick-Breaking scheme(**creating "G" distribution**)
+   - : Big `α` results in big sticks while small `α` results in small sticks.
+ - Sol 2) Chinese-Restaurant scheme(**assigning membership to new point**)
+   - : A customer is more likely to sit at a table if there are already many people sitting there. However, with probability proportional to `α`, the customer will ask a new table.
      
  - ### [1] Stick-Breaking scheme: 
-   - **`Sampling a decent distribution: G(A_i)`**, "the single stick", an element of **G**. 
+   - **`Creating a decent distribution: G(A_i)`**, "the single stick", an element of **G**. 
    - How to obtain a candidate probability values of the pizza with infinite slicing?
      - Using the "adjusted Beta value": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
      - Based on the properties of Beta:
@@ -181,7 +186,7 @@ At the end of the day, the constructing(estimating) cluster is done by sampling.
    <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
   
  - ### [2] Chinese-Restaurant-Process scheme:
-   - **`Sampling a decent point`**
+   - **`Assigning a membership to new point`**
    - CRP is a sequence of distributions indexed by `K`. Let's say the CRP object is a "partition `π`".
      - partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) = c(distr, distr, distr, ..) where n is a total data_size and each subset element(distribution) within a partition is a restaurant table K.    
    - CRP(α, N) is a distribution over all `N`-partitions of the labeled set:     
