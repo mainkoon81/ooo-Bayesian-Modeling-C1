@@ -142,7 +142,7 @@ plt.plot(X_test, f_prior)
 Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 <img src="https://user-images.githubusercontent.com/31917400/75352237-5529c080-58a1-11ea-8161-4a22705d4981.jpg" />
 
-For the time being, forget about the labeling. What is DP in general? 
+For the time being, forget about the labeling because if K goes to infinity, our "Z case" becomes random variable. Now it's time for Random Process! What is DP in general? 
 <img src="https://user-images.githubusercontent.com/31917400/75434543-9e354f80-5949-11ea-9e1f-57acb47615ba.jpg" />
 
 ### What is DP?
