@@ -167,7 +167,7 @@ We want to get a control over our latent variable. The latent variable dimension
 So far, we have discussed what is DP. 
 
 ### How to decide the membership of new data pt? 
-At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior. We want to sample the "function" **G**(clustering instance) from prior: DP(`α`, `G0`). First, let's construct the DP prior, using Non-parametric **prior construction** scheme. 
+At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior. We want to sample the "function" **G**(`θ` distribution as a "clustering example") from prior: DP(`α`, `G0`). First, let's construct the DP prior, using Non-parametric **prior construction** scheme. 
  - Sol 1) Stick-Breaking scheme(sampling distribution)
  - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
