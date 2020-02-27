@@ -60,7 +60,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    - The `plate notation` refers to **Random Variables** otherwise parameters. 
  <img src="https://user-images.githubusercontent.com/31917400/75390560-5cbc8a00-58e0-11ea-931d-6edafda8444c.jpg" />
 
-   - ### The membership "Z" can be expressed in two ways: 
+   - ### The membership pool "Z" can be expressed in two ways: 
      - 1.Collection of the cluster parameters `μ` and `Σ` 
      - 2.Collection of the cluster proportions `π`
        - Here, just focus on **π**: obv-proportions for the membership "Z". 
