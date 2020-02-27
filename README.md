@@ -143,13 +143,13 @@ Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 <img src="https://user-images.githubusercontent.com/31917400/75352237-5529c080-58a1-11ea-8161-4a22705d4981.jpg" />
 
 For the time being, forget about the labeling. What is DP in general? 
-<img src="https://user-images.githubusercontent.com/31917400/75431360-aa6ade00-5944-11ea-8b84-fdce1359a177.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/75434289-38e15e80-5949-11ea-8b28-a827927d0eea.jpg" />
 
 ### What is DP?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **joint of the random vector**: (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) is a **K-dimensional Dirichlet distribution** with parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). 
 
 ### Why you want "G"?
-It's a possible probability distribution of each cluster proportions. From G, we can sample `Cluster Information` such as "proportion" ![formula](https://render.githubusercontent.com/render/math?math=\theta_k), or "location" ![formula](https://render.githubusercontent.com/render/math?math=\mu_k,\Sigma_k). Then we can build the generative clusters to sample new data points.  
+It's a possible probability distribution over each **cluster proportions** `θ`. From G, we can sample `Cluster Information` such as "proportion" ![formula](https://render.githubusercontent.com/render/math?math=\theta_k), or "location" ![formula](https://render.githubusercontent.com/render/math?math=\mu_k,\Sigma_k). Then we can build the generative clusters to sample new data points.  
 
 ### Why from G0?
  - `G0` is the mean of **DP(α, `G0`)**. It's a centering distribution.
