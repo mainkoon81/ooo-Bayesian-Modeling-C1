@@ -187,32 +187,10 @@ We can construct the DP prior, using Non-parametric **prior construction** schem
   
  - ### [2] Chinese-Restaurant-Process scheme:
    - **`Assigning a membership to new point`**
-   - CRP is a sequence of distributions indexed by `K`. Let's say the CRP object is a "partition `π`".
-     - partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) = c(distr, distr, distr, ..) where n is a total data_size and each subset element(distribution) within a partition is a restaurant table K.    
-   - CRP(α, N) is a distribution over all `N`-partitions of the labeled set:     
-     - CRP(α, N) = c(![formula](https://render.githubusercontent.com/render/math?math=\pi_n,\pi_n,...\pi_n)) where each ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) refers to a partition. So we have `N`*partition objects. 
-   - Given a partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), the destination of the next person `n + 1` has the following distribution:  
-   <img src="https://user-images.githubusercontent.com/31917400/74105783-cb67bc80-4b58-11ea-9012-20fa99bff2a7.jpg" />
-   
-   - To think about the mixture model, consider we have **partition objects** as many as the total datasize. From CRP(α, N), we can sample a single partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_N), i.e, we first draw a single partition. 
-   - Next, for `each tables` within the drawn partition, we draw a parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) i.i.d. from the base distribution ![formula](https://render.githubusercontent.com/render/math?math=G_0). `This can be prior`.
-   - If a data pt ![formula](https://render.githubusercontent.com/render/math?math=x_i) belongs to the table 'K', the data pt will be drawn from some distribution **F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K))** which is parameterized by the corresponding parameter ![formula](https://render.githubusercontent.com/render/math?math=\phi_K). `This can be likelihood`. 
-   <img src="https://user-images.githubusercontent.com/31917400/74106820-ba6f7900-4b61-11ea-8025-47155a0d31dc.jpg" />
-
-   - We wish ![formula](https://render.githubusercontent.com/render/math?math=G_0) and F(![formula](https://render.githubusercontent.com/render/math?math=\phi_K)) have a conjugate relation for later. 
-   - At first glance, this model does not seem any different from a finite mixture model. However,the difference lies in the behavior as N(# of partitions you have) grows: here, the number of tables(and hence table parameters φ) will grow with N, which does not occur in a finite mixture model. This is the essence of the "non-parametric" aspect.
+   - here, the number of tables(and hence table parameters θ) will grow with N, which does not occur in a finite model. This is the essence of the "non-parametric" aspect.
    - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
    <img src="https://user-images.githubusercontent.com/31917400/74458192-3ed33c00-4e81-11ea-928c-8d06879909de.jpg" />
-
-
-
-
-
-
-### Finally,
-If we incorporate the `CRP(α, N)` and the base distribution `G0` to describe the distribution of `θ`, using the recursion, we can get "DP prior"! `N` refers to "total data pt size".
-<img src="https://user-images.githubusercontent.com/31917400/74238303-6d101a80-4ccd-11ea-9713-54c2af73542a.jpg" />
 
 ### Inference:
 The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling. Let's say..given the previous partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), we remove one data pt `x` from the partition (prior) then re-added to the partition (likelihood) to obtain posterior: **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|`x`)**. This gives **new partition** (prior)! 
@@ -221,15 +199,6 @@ The main goal of clustering is to find the posterior distribution **P(![formula]
      - Chinese-Restaurant-Process is exchangeable process
      - Gibbs Sampling should use the exchangeability coz...its sampling is carried out one label by one label...so can ignore labeling order. 
      <img src="https://user-images.githubusercontent.com/31917400/74452857-86ee6080-4e79-11ea-8676-5b0357881917.jpg" />
-
-
-
-
-
-
-
-
-
 
 ## C. Dirichlet Process Mixture Model   
 **G** from DP is `discrete` with probability "1", thus DP would not be a suitable prior distribution for the situations with continuous data coz in this case, we want continuous **G**. Let's think about mixture models. Mixture models are widely used for **density estimation** and classification problem. A natural idea is to create a prior for `continuous` densities via a mixture where the mixing distribution **G** is given a Dirichlet process prior. As a natural way to increase the applicability of DP-based modeling, we can use DP as a prior for the mixing distribution in a mixture model with a `parametric kernel distribution`. 
