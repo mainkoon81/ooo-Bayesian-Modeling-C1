@@ -172,8 +172,8 @@ At the end of the day, the constructing(estimating) cluster is done by sampling.
  - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
  - ### [1] Stick-Breaking scheme: 
-   - Obtain a probability of the pizza with infinite slicing?
-   - Sampling a decent distribution 'G(A)', "the single stick", an element of **G**. 
+   - **`Sampling a decent distribution: G(A_i)`**, "the single stick", an element of **G**. 
+   - How to obtain a candidate probability values of the pizza with infinite slicing?
      - Using the "adjusted Beta value": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
      - Based on the properties of Beta:
        - Big Hyperparameter: result in big sticks
@@ -181,6 +181,7 @@ At the end of the day, the constructing(estimating) cluster is done by sampling.
    <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
   
  - ### [2] Chinese-Restaurant-Process scheme:
+   - **`Sampling a decent point`**
    - CRP is a sequence of distributions indexed by `K`. Let's say the CRP object is a "partition `π`".
      - partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n) = c(distr, distr, distr, ..) where n is a total data_size and each subset element(distribution) within a partition is a restaurant table K.    
    - CRP(α, N) is a distribution over all `N`-partitions of the labeled set:     
