@@ -158,15 +158,16 @@ It's a possible probability distribution over each **cluster proportions** `θ`.
    - `α` controls the concentration arount the mean (larger α makes the concentration tighter). The variance of the DP will be smaller as we choose a larger **α**. 
    - For example, let ![formula](https://render.githubusercontent.com/render/math?math=G_0)=N(0,1) and **α** be an arbitrary positive number. From ![formula](https://render.githubusercontent.com/render/math?math=G_0)(Gaussian), **we are sampling a random temporary value** ![formula](https://render.githubusercontent.com/render/math?math=\Phi_k). 
  
-
 ### How to control hyperparameter(cluster size)????
 We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `θ`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`**?
  - "We assign base probability(pmf `G0` or `H` which is `E[G(A_k)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...) in Dirichlet"!
  - Think of the "labels" as a particular random value drawn from the `G(A)`. i.e., all the random variables in a same category share the same value(label), and the values(labels) are distributed according to our chosen base distribution `G(A)`. Now we need to get a control over such **probability assigning mechanism** in Dirichlet. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial probability values(parameters),...thus, we can think of an infinite number of partitions - A1, A2, A3... 
  - At the end of the day, the hyperparameter control(probability space partitioning to assign to hyperparameter) can be done by manipulating **`prior`** (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable's parameter `θ` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
 
-### Sampling from DP and how to decide the membership of new data pt? 
-We want to sample the "function" **G** from prior: DP(`α`, `G0`). First, let's construct the DP prior, using Non-parametric **prior construction** scheme.  
+So far, we have discussed what is DP. 
+
+### How to decide the membership of new data pt? 
+At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior. We want to sample the "function" **G**(clustering instance) from prior: DP(`α`, `G0`). First, let's construct the DP prior, using Non-parametric **prior construction** scheme. 
  - Sol 1) Stick-Breaking scheme(sampling distribution)
  - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
@@ -206,30 +207,26 @@ We want to sample the "function" **G** from prior: DP(`α`, `G0`). First, let's 
 
 
 
-## Finally,
+### Finally,
 If we incorporate the `CRP(α, N)` and the base distribution `G0` to describe the distribution of `θ`, using the recursion, we can get "DP prior"! `N` refers to "total data pt size".
 <img src="https://user-images.githubusercontent.com/31917400/74238303-6d101a80-4ccd-11ea-9713-54c2af73542a.jpg" />
 
-So `θ` says ![formula](https://render.githubusercontent.com/render/math?math=\phi_K) which is the parameter value (ex. ![formula](https://render.githubusercontent.com/render/math?math=\mu_K)) that describes the table(cluster). And `θ`(like a mu) follows the distribution that is sampled from the Dirichlet?      
-
-???? 'Z' as a label can be 1,2,3,...∞...and follows Multinomial(`π`). `π` is a parameter vector: c(P(Z=1), P(Z=2), ..P(Z=∞)).  The hyperparameter vector `α` yields a parameter vector `π` which is drawn from `G(A): the distribution of data pt in "A" division` -  Can we go with Gaussian? Sample means follow Gaussian, and we are drawing sample means? 
-
-
-
- 
-
-
-
-
-
-   
-## Inference:
+### Inference:
 The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling. Let's say..given the previous partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), we remove one data pt `x` from the partition (prior) then re-added to the partition (likelihood) to obtain posterior: **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|`x`)**. This gives **new partition** (prior)! 
  - de Finetti's theorem + GibbsSampling
    - The exechangeability is important coz...
      - Chinese-Restaurant-Process is exchangeable process
      - Gibbs Sampling should use the exchangeability coz...its sampling is carried out one label by one label...so can ignore labeling order. 
      <img src="https://user-images.githubusercontent.com/31917400/74452857-86ee6080-4e79-11ea-8676-5b0357881917.jpg" />
+
+
+
+
+
+
+
+
+
 
 ## C. Dirichlet Process Mixture Model   
 **G** from DP is `discrete` with probability "1", thus DP would not be a suitable prior distribution for the situations with continuous data coz in this case, we want continuous **G**. Let's think about mixture models. Mixture models are widely used for **density estimation** and classification problem. A natural idea is to create a prior for `continuous` densities via a mixture where the mixing distribution **G** is given a Dirichlet process prior. As a natural way to increase the applicability of DP-based modeling, we can use DP as a prior for the mixing distribution in a mixture model with a `parametric kernel distribution`. 
