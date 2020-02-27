@@ -173,7 +173,7 @@ At the end of the day, the constructing(estimating) cluster is done by sampling.
      
  - ### [1] Stick-Breaking scheme: 
    - How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
-   - Sampling a decent distribution 'G(A)', 
+   - Sampling a decent distribution 'G(A)', "the single stick", an element of **G**. 
      - Using the "adjusted Beta": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
      - times
      - Using the number(count) of events(`π` pt) at the event space `A_k`??? or the count of the event space `A_k`???
