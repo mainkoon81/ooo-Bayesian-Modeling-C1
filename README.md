@@ -90,7 +90,7 @@ It's a distribution over `n` dimensional vectors called "θ". It can be thought 
    <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" />
 
  - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
-   <img src="https://user-images.githubusercontent.com/31917400/75098914-a0975280-55b3-11ea-87d0-36d4c843580e.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" />
 
 > ## But how Random Process can deal with infinite hyper-parameter?
 parameter size VS parameter value ???
