@@ -150,7 +150,7 @@ For any partition ![formula](https://render.githubusercontent.com/render/math?ma
 
 ### Why you want "G"?
 It's a possible probability distribution over each **cluster proportions** `θ`. It says probabilities of each cluster proportion. It says the probability details(how much a certain cluster can suck when new data point arrives..) of each cluster-proportioning scheme that is sampled from Dirichlet Distribution. From G, we can sample `Cluster Information` such as "proportion" ![formula](https://render.githubusercontent.com/render/math?math=\theta_k), or "location" ![formula](https://render.githubusercontent.com/render/math?math=\mu_k,\Sigma_k). Then we can build the generative clusters to sample new data points.  
-<img src="https://user-images.githubusercontent.com/31917400/75457669-a951a500-5974-11ea-93aa-3e147d849899.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/75459230-f9316b80-5976-11ea-9a2f-362b927c83bb.jpg" />
 
 
 
