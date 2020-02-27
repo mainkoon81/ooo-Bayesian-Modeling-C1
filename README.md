@@ -172,12 +172,9 @@ At the end of the day, the constructing(estimating) cluster is done by sampling.
  - Sol 2) Polya-Urn scheme or Chinese-Restaurant scheme(just sampling point)
      
  - ### [1] Stick-Breaking scheme: 
-   - How to deal with pmf on infinite choice? How to get a probability of the pizza with infinite slicing?
+   - Obtain a probability of the pizza with infinite slicing?
    - Sampling a decent distribution 'G(A)', "the single stick", an element of **G**. 
-     - Using the "adjusted Beta": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
-     - times
-     - Using the number(count) of events(`π` pt) at the event space `A_k`??? or the count of the event space `A_k`???
-     - then Sum them up! It would give you new `π` estimation???? distribution ?????????????????????? Bruna?? 
+     - Using the "adjusted Beta value": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
      - Based on the properties of Beta:
        - Big Hyperparameter: result in big sticks
        - Small Hyperparameter: result in small stick
