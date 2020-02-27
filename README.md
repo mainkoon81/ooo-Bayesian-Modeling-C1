@@ -205,9 +205,9 @@ The main goal of clustering is to find the posterior distribution **P(![formula]
 
 The posterior under a DPMM is effectively finite-dimensional, though the dimension is adaptive, determined by data, as opposed to fixed like in the parametric models. This **adaptive dimensionality** is what gives the model its flexibility and its effective **finite-dimensionality** is what makes posterior computation possible.
 
-DP gives a cdf while DPM gives a density???? 
+DP gives a `cdf` while DPMixture gives a `density` ???? 
  - One hurdle we encounter here is **"sampling from `G`"**, which has countably many atoms(sticks). There is also an exact approach that generates atoms "on the fly" as needed, and exploits the fact that only finitely many atoms are needed in practice.  
- <img src="https://user-images.githubusercontent.com/31917400/75353486-696ebd00-58a3-11ea-8a14-97f13bd2541c.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/75472479-76ff7200-598b-11ea-8bc5-349206608055.jpg" />
 
  - For the sampling algorithm, it is convenient to include table assignment variable `Z` to indicate which table our data pt ![formula](https://render.githubusercontent.com/render/math?math=\x_i) belongs to.  
  <img src="https://user-images.githubusercontent.com/31917400/74239298-7ac69f80-4ccf-11ea-9474-e0eb493dee18.jpg" /> where `Cat()` refers to a categorical or multinoulli distribution? 
