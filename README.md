@@ -167,7 +167,7 @@ We want to get a control over our latent variable. The latent variable dimension
 So far, we have discussed what is DP. 
 
 ### How to decide the membership of new data pt? 
-At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior, i.e. We want to sample the "function" **G**(`θ` distribution as a "clustering example") from prior: DP(`α`, `G0`). 
+At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior, i.e. We want to sample the "function" **G**(distribution over proportions of each `θ` as a random "clustering scheme") from prior: DP(`α`, `G0`). 
 <img src="https://user-images.githubusercontent.com/31917400/75469279-a495ec80-5986-11ea-8a39-f66d176a9270.jpg" />
 
 We can construct the DP prior, using Non-parametric **prior construction** scheme, then assign a membership to new data.  
@@ -177,7 +177,7 @@ We can construct the DP prior, using Non-parametric **prior construction** schem
    - : A customer is more likely to sit at a table if there are already many people sitting there. However, with probability proportional to `α`, the customer will ask a new table.
      
  - ### [1] Stick-Breaking scheme: 
-   - **`Creating a decent distribution: G(A_i)`**, "the single stick", an element of **G**. 
+   - **`Creating a decent distribution: G(A_i)`**, "the each single stick", an element of **G**. 
    - How to obtain a candidate probability values of the pizza with infinite slicing?
      - Using the "adjusted Beta value": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
      - Based on the properties of Beta:
