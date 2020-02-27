@@ -143,7 +143,7 @@ Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
 <img src="https://user-images.githubusercontent.com/31917400/75352237-5529c080-58a1-11ea-8161-4a22705d4981.jpg" />
 
 For the time being, forget about the labeling because if K goes to infinity, our "Z case" becomes random variable. Now it's time for Random Process! What is DP in general? 
-<img src="https://user-images.githubusercontent.com/31917400/75434543-9e354f80-5949-11ea-9e1f-57acb47615ba.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/75455380-4ca0bb00-5971-11ea-911b-d49c05eed940.jpg" />
 
 ### What is DP?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **joint of the random vector**: (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). 
