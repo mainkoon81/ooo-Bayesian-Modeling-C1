@@ -126,7 +126,7 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
  
 
 
-
+ - Case 03> Inducing Input
 
 
 
