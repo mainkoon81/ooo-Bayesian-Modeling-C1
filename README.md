@@ -109,6 +109,26 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
 
 > ## But for what do we need such customized(weighted) samples? 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **GP** is a distribution over functions. 
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
