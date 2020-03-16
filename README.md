@@ -107,6 +107,8 @@ parameter size VS parameter value ???
 Kernel helps us obtain customized samples in the random process. And if we keep increasing the value of bandwidth in the kernel, we'll have almost **constant functions**...weighted evenly???? 
 <img src="https://user-images.githubusercontent.com/31917400/75114699-439daa00-5650-11ea-962d-608bb877a093.jpg" /> 
 
+> ## But for what do we need such customized(weighted) samples? 
+
 **GP** is a distribution over functions. 
 <img src="https://user-images.githubusercontent.com/31917400/73618695-60325d80-4621-11ea-8584-e57f3d37c1de.png" />
 
