@@ -104,7 +104,7 @@ parameter size VS parameter value ???
 **GP** on `S` refers to a bunch of random variables(with pdf: `f(x)`) on `S`... whose index is the member of the set `S` such that they can have the following properties: The bunch of variables ![formula](https://render.githubusercontent.com/render/math?math=x_n) with pdf functions: f(![formula](https://render.githubusercontent.com/render/math?math=x_n)) are normally multivariate distributed, thus GP outputs from the **mean function** and **cov function (kernel function)**! Gaussian process is parameterized by the `mean vector` and the `covariance matrix`.
 <img src="https://user-images.githubusercontent.com/31917400/75114525-89597300-564e-11ea-8411-2da2243a421d.jpg" /> 
 
-Kernel gives customized samples in the random process. And if we keep increasing the value of l in the kernel, we'll have almost constant functions. 
+Kernel gives customized samples in the random process. And if we keep increasing the value of bandwidth in the kernel, we'll have almost constant functions. 
 <img src="https://user-images.githubusercontent.com/31917400/75114699-439daa00-5650-11ea-962d-608bb877a093.jpg" /> 
 
 **GP** is a distribution over functions. 
