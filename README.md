@@ -110,7 +110,7 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
 > ## But for what do we need such customized(weighted) samples? 
 
 ### Training GP
-<img src="https://user-images.githubusercontent.com/31917400/76788275-8156a400-67b2-11ea-86d9-39346279a64b.jpg" /> 
+<img src="https://user-images.githubusercontent.com/31917400/76788672-45700e80-67b3-11ea-90a1-d8a35fa0f12e.jpg" /> 
 
 
 
