@@ -122,7 +122,8 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
      - Parameter Optimization using Maximum Likelihood Estimation  
      <img src="https://user-images.githubusercontent.com/31917400/76794907-f9779680-67bf-11ea-96d0-2982a05dd48b.jpg" /> 
 
-
+ - Case 02> GP Classification
+ 
 
 
 
