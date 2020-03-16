@@ -112,7 +112,7 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
 ### Training GP
 <img src="https://user-images.githubusercontent.com/31917400/76789020-ea8ae700-67b3-11ea-8ea5-a0c3175a7688.jpg" /> 
 
-Some tricks for GP training
+### Some tricks for GP training
  - Case 01> Too noisy observations:
    - Add the **independent Gaussian noise** to all RVs.
      - we don't have the `0 variance` data points anymore. And also the **mean function became a bit smoother**.
