@@ -118,7 +118,7 @@ Some tricks for GP training
      - we don't have the `0 variance` data points anymore. And also the **mean function became a bit smoother**.
      <img src="https://user-images.githubusercontent.com/31917400/76793814-a6044900-67bd-11ea-9e1a-bbd5e017c0c9.jpg" /> 
 
-   - Hey, we can change the parameters(bandwidth, sigma, sigma, etc.) of the kernel a bit, and find the optimal values for them, in this special case. 
+   - Hey, we can change the parameters(bandwidth of kernel, variance of GP, variance of noise) of the kernel a bit, and find the optimal values for them, in this special case. 
      - Parameter Optimization using Maximum Likelihood Estimation  
      <img src="https://user-images.githubusercontent.com/31917400/76794907-f9779680-67bf-11ea-96d0-2982a05dd48b.jpg" /> 
 
