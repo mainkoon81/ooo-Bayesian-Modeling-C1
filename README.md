@@ -109,10 +109,13 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
 
 > ## But for what do we need such customized(weighted) samples? 
 
-### Training GP
+### 1> GP Regression
 <img src="https://user-images.githubusercontent.com/31917400/76789020-ea8ae700-67b3-11ea-8ea5-a0c3175a7688.jpg" /> 
 
-### Some tricks for GP training
+### 2> GP Classification
+
+
+### 3> Some tricks for GP training
  - Case 01> Too noisy observations:
    - Add the **independent Gaussian noise** to all RVs.
      - we don't have the `0 variance` data points anymore. And also the **mean function became a bit smoother**.
@@ -122,11 +125,8 @@ Kernel helps us obtain customized samples in the random process. And if we keep 
      - Parameter Optimization using Maximum Likelihood Estimation  
      <img src="https://user-images.githubusercontent.com/31917400/76794907-f9779680-67bf-11ea-96d0-2982a05dd48b.jpg" /> 
 
- - Case 02> GP Classification
- 
 
-
- - Case 03> Inducing Input
+ - Case 02> Inducing Input
 
 
 
