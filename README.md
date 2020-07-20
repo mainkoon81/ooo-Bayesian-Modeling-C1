@@ -101,6 +101,12 @@ parameter size VS parameter value ???
 
 --------------------------------------------------------------------------------------------------------------------
 # A. Gaussian Process and Non-linear Problem
+Before using Gaussian Processes, you have two main questions: 
+ - Q1. "Is your dataset reasonably small?" (less than 1,000 is fine)
+   - Gaussian Processes don't do well with large numbers of points.
+ - Q2. "Do you have a good idea about how two point's labels are related?" 
+   - ex) if you know f(1) = A, do you have any good intuition about what that makes you think f(4) is? This is crucial for picking a reasonable covariance function. It’s useful when you want a measure of uncertainty about your predictions instead of just a point estimate. "What’s the probability that f(4) is between 2 and 7?"  then a Gaussian process with a linear-kernel would make sense.
+
 **GP** on `S` refers to a bunch of random variables(with pdf: `f(x)`) on `S`... whose index is the member of the set `S` such that they can have the following properties: The bunch of variables ![formula](https://render.githubusercontent.com/render/math?math=x_n) with pdf functions: f(![formula](https://render.githubusercontent.com/render/math?math=x_n)) are normally multivariate distributed, thus GP outputs from the **mean function** and **cov function (kernel function)**! Gaussian process is parameterized by the `mean vector` and the `covariance matrix`.
 <img src="https://user-images.githubusercontent.com/31917400/76784936-7731a700-67ac-11ea-8170-d25a73254c94.jpg" /> 
 
