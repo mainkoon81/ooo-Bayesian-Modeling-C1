@@ -3,11 +3,10 @@ Non-parametric Bayesian Model
  - GP
  - DP
 
-# Background Study
 ## > Gaussian Story
 <img src="https://user-images.githubusercontent.com/31917400/73613995-07e46700-45f3-11ea-8760-6ae349c15dd8.png" />
 
-## Kernel ?
+## > Kernel ?
 <img src="https://user-images.githubusercontent.com/31917400/75116483-d2b2be00-5660-11ea-89d0-9949fac62a72.jpg" />
 
 ### Estimating a distribution?
@@ -30,79 +29,6 @@ The benefit of using the Nonparametric estimator is that there are no assumption
  - otheres: smoothing histogram(kde),...giving customized samples(behaving as the covariance) in the random process
  - a kernel is a weighting function..by calculating each kernel value for each data point. 
  - ??????????????????????????
-
-
-## > Dirichlet Story
-### Beta eats `α`, `β` and spits out `θ`.
- - `α`, `β` are shape parameters.
- - **Beta(`α`, `β`) prior** takes Bin(n, `θ`) likelihood
-### Dirichlet eats `α1`,`α2`,`α3`... and spits out `θ1`,`θ2`,`θ3`,...
- - Dirichlet Distribution is a generalized beta distribution.
- - `α1`,`α2`,`α3`... are shape parameters.
- - **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.
-<img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
-
- - Its **parameter `α`** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
-   - if α1,α2,α3 are all the same, then the outcome(`θ_i`) appears uniformly.  
-   - if α1,α2,α3 are small(<1), the outcome(`θ_i`) appears each corner and edge of the plane
-     - Push the distribution to the corners.
-   - if α1,α2,α3 are big(>1), the outcome(`θ_i`) appears in the center of the plane
-     - Push the distribution to the middle.
-   - Thus...α controls the mixture of outcomes. 
-     - Turn it down, and we will likely have different values for each possible outcome. 
-     - Turn it up, and we will likely have same values for each possible outcome.
- - Its **outcome `θ`** will be: `n` dimensional vector corresponding to some pmf over n possible outcomes: `c(θ_1, θ_2, θ_3) where θ_1 + θ_2 + θ_3 = 1`
-It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
- - Dirichlet distribution is the conjugate prior for the **multinomial likelihood**.
- - Each `θ_i` has its own `α`...weight(scale) for each distribution of `θ_i`
- - Each `θ_i` has its own distribution...so each is a function???????
- - Total sum of `θ_i` is 1.
-<img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
-
-### Question! 
- - Automatic Hyperparameter Estimation? (determining parameter size??) 
- - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
-   - The `plate notation` refers to **Random Variables** otherwise parameters. 
- <img src="https://user-images.githubusercontent.com/31917400/75390560-5cbc8a00-58e0-11ea-931d-6edafda8444c.jpg" />
-
-   - ### The membership pool "Z" can be expressed in two ways: 
-     - 1.Collection of the cluster parameters `μ` and `Σ` 
-     - 2.Collection of the cluster proportions `π`
-       - Here, just focus on **π**: obv-proportions for the membership "Z". 
-       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\mu_i,\Sigma_i))
-       - In Gaussian Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..
-       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=\theta_i)
-       - In Dirichlet Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..     
-     - Gaussian Mixture vs Dirichlet Mixture
-       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(Z_k)): `Likelihood` (This is for Gaussian Mixture)
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=((\mu_1,\Sigma_1),(\mu_2,\Sigma_2),..)~NormaInverseWishart(\mu_0,\kappa_0,\nu_0,\nu_0\Sigma_0)): `prior` (This is for Gaussian Mixture)
-       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_k)) : `Prior` (This is for Dirichlet Mixture) 
-       - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable with the help of sampling `θ` from Dirichlet prior! So it seems we can easily get the posterior, thus our `θ` ("mixing coefficients" or "obv-proportion" for every Gaussians) at the end. Done and dusted! We now have the model describing our data! Wait! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ?
-       <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
-     
-   - ### How are you gonna deal with **`α`** and what if `k` goes to infinity? 
-   
-[Idea]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
-> Note: Random Variable & Random Process
- - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
-   - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
- - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc... Markov Chain is also random process(resulting random ouput) in which the effect of the past on the future is only summarized by the current state.  
-
-### Random process is a collection of random variables labeled(indexed) by `t`.  
- - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
- - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
-   <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" />
-
- - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
-   <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" />
-
-> ## But how Random Process can deal with infinite hyper-parameter?
-parameter size VS parameter value ???
- - Run the experiments by each parameter size...denoted by `t`.  
- - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
-   - Random(Stochastic) Process refers to the infinite `t` (infinitely hyperparameterized) collection of random variables.
-   - ## With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?  
 
 --------------------------------------------------------------------------------------------------------------------
 # A. Gaussian Process and Non-linear Problem
@@ -177,6 +103,89 @@ f_prior = np.dot(L, np.random.normal(size= (n, 10))) # draw 10 samples(functions
 
 plt.plot(X_test, f_prior)
 ```
+
+
+
+
+
+
+
+
+
+
+
+## > Dirichlet Story
+### Beta eats `α`, `β` and spits out `θ`.
+ - `α`, `β` are shape parameters.
+ - **Beta(`α`, `β`) prior** takes Bin(n, `θ`) likelihood
+### Dirichlet eats `α1`,`α2`,`α3`... and spits out `θ1`,`θ2`,`θ3`,...
+ - Dirichlet Distribution is a generalized beta distribution.
+ - `α1`,`α2`,`α3`... are shape parameters.
+ - **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.
+<img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
+
+ - Its **parameter `α`** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
+   - if α1,α2,α3 are all the same, then the outcome(`θ_i`) appears uniformly.  
+   - if α1,α2,α3 are small(<1), the outcome(`θ_i`) appears each corner and edge of the plane
+     - Push the distribution to the corners.
+   - if α1,α2,α3 are big(>1), the outcome(`θ_i`) appears in the center of the plane
+     - Push the distribution to the middle.
+   - Thus...α controls the mixture of outcomes. 
+     - Turn it down, and we will likely have different values for each possible outcome. 
+     - Turn it up, and we will likely have same values for each possible outcome.
+ - Its **outcome `θ`** will be: `n` dimensional vector corresponding to some pmf over n possible outcomes: `c(θ_1, θ_2, θ_3) where θ_1 + θ_2 + θ_3 = 1`
+It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
+ - Dirichlet distribution is the conjugate prior for the **multinomial likelihood**.
+ - Each `θ_i` has its own `α`...weight(scale) for each distribution of `θ_i`
+ - Each `θ_i` has its own distribution...so each is a function???????
+ - Total sum of `θ_i` is 1.
+<img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
+
+### Question! 
+ - Automatic Hyperparameter Estimation? (determining parameter size??) 
+ - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
+   - The `plate notation` refers to **Random Variables** otherwise parameters. 
+ <img src="https://user-images.githubusercontent.com/31917400/75390560-5cbc8a00-58e0-11ea-931d-6edafda8444c.jpg" />
+
+   - ### The membership pool "Z" can be expressed in two ways: 
+     - 1.Collection of the cluster parameters `μ` and `Σ` 
+     - 2.Collection of the cluster proportions `π`
+       - Here, just focus on **π**: obv-proportions for the membership "Z". 
+       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=P(\mu_i,\Sigma_i))
+       - In Gaussian Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\pi_1,\pi_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..
+       - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=\theta_i)
+       - In Dirichlet Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..     
+     - Gaussian Mixture vs Dirichlet Mixture
+       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(Z_k)): `Likelihood` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=((\mu_1,\Sigma_1),(\mu_2,\Sigma_2),..)~NormaInverseWishart(\mu_0,\kappa_0,\nu_0,\nu_0\Sigma_0)): `prior` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_k)) : `Prior` (This is for Dirichlet Mixture) 
+       - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable with the help of sampling `θ` from Dirichlet prior! So it seems we can easily get the posterior, thus our `θ` ("mixing coefficients" or "obv-proportion" for every Gaussians) at the end. Done and dusted! We now have the model describing our data! Wait! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ?
+       <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
+     
+   - ### How are you gonna deal with **`α`** and what if `k` goes to infinity? 
+   
+[Idea]: `**infinite latent variable parameter values** can be controlled by Random Process that can address **α**`
+> Note: Random Variable & Random Process
+ - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
+   - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
+ - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc... Markov Chain is also random process(resulting random ouput) in which the effect of the past on the future is only summarized by the current state.  
+
+### Random process is a collection of random variables labeled(indexed) by `t`.  
+ - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
+ - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
+   <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" />
+
+ - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
+   <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" />
+
+> ## But how Random Process can deal with infinite hyper-parameter?
+parameter size VS parameter value ???
+ - Run the experiments by each parameter size...denoted by `t`.  
+ - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
+   - Random(Stochastic) Process refers to the infinite `t` (infinitely hyperparameterized) collection of random variables.
+   - ## With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?  
+
 
 
 -------------------------------------------------------------------------------------------------
