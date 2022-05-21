@@ -3,6 +3,23 @@ Non-parametric Bayesian Model
  - GP
  - DP
 
+### Random process is a collection of random variables labeled(indexed) by `t`.  
+ - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
+ - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
+   <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" />
+
+ - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
+   <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" />
+
+> ## But how Random Process can deal with infinite hyper-parameter?
+parameter size VS parameter value ???
+ - Run the experiments by each parameter size...denoted by `t`.  
+ - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
+   - Random(Stochastic) Process refers to the infinite `t` (infinitely hyperparameterized) collection of random variables.
+   - ## With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?
+
+
+
 ## > Gaussian Story
 <img src="https://user-images.githubusercontent.com/31917400/73613995-07e46700-45f3-11ea-8760-6ae349c15dd8.png" />
 
@@ -165,23 +182,6 @@ plt.plot(X_test, f_prior)
  - : RV is different from the variable in algebra as RV has whole set of values and it can take any of those randomly. Variable used in algebra cannot have more than a single value at a time: 
    - ex)`random variable_X = {0,1,2,3}`, `variable_K = 1`.
  - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc... Markov Chain is also random process(resulting random ouput) in which the effect of the past on the future is only summarized by the current state.  
-
-### Random process is a collection of random variables labeled(indexed) by `t`.  
- - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
- - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
-   <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" />
-
- - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
-   <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" />
-
-> ## But how Random Process can deal with infinite hyper-parameter?
-parameter size VS parameter value ???
- - Run the experiments by each parameter size...denoted by `t`.  
- - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
-   - Random(Stochastic) Process refers to the infinite `t` (infinitely hyperparameterized) collection of random variables.
-   - ## With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?  
-
-
 
 -------------------------------------------------------------------------------------------------
 # B. Dirichlet Process and hyperparameter estimation???
