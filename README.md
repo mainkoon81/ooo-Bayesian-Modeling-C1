@@ -122,7 +122,7 @@ plt.plot(X_test, f_prior)
  - Dirichlet Distribution is a generalized beta distribution.
  - `α1`,`α2`,`α3`... are shape parameters.
  - **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.
-<img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/169671795-04119d64-1060-4169-b155-cbaf1ecf96b2.jpg" />
 
  - Its **parameter `α`** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
    - if α1,α2,α3 are all the same, then the outcome(`θ_i`) appears uniformly.  
