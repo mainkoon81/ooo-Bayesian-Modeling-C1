@@ -35,9 +35,11 @@ The benefit of using the Nonparametric estimator is that there are no assumption
 ## > Dirichlet Story
 ### Beta eats `α`, `β` and spits out `θ`.
  - `α`, `β` are shape parameters.
+ - **Beta(`α`, `β`) prior** takes Bin(n, `θ`) likelihood
 ### Dirichlet eats `α1`,`α2`,`α3`... and spits out `θ1`,`θ2`,`θ3`,...
+ - Dirichlet Distribution is a generalized beta distribution.
  - `α1`,`α2`,`α3`... are shape parameters.
-Dirichlet Distribution is a generalized beta distribution. **Beta(`α`, `β`) prior** takes Bin(n, `θ`) likelihood while **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.    
+ - **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.
 <img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
 
  - Its **parameter `α`** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
