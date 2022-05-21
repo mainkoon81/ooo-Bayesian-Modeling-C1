@@ -124,22 +124,17 @@ plt.plot(X_test, f_prior)
  - **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.
 <img src="https://user-images.githubusercontent.com/31917400/169671795-04119d64-1060-4169-b155-cbaf1ecf96b2.jpg" />
 
- - Its **parameter `α`** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
+ - Its **parameter `α`** will be a shape vector.  
    - if α1,α2,α3 are all the same, then the outcome(`θ_i`) appears uniformly.  
-   - if α1,α2,α3 are small(<1), the outcome(`θ_i`) appears each corner and edge of the plane
-     - Push the distribution to the corners.
-   - if α1,α2,α3 are big(>1), the outcome(`θ_i`) appears in the center of the plane
-     - Push the distribution to the middle.
+   - if α1,α2,α3 are large(>1), the outcome(`θ_i`) appears in the center of the plane (convexed) 
+   - if α1,α2,α3 are small(<1), the outcome(`θ_i`) appears each corner and edge of the plane (concaved)
    - Thus...α controls the mixture of outcomes. 
      - Turn it down, and we will likely have different values for each possible outcome. 
      - Turn it up, and we will likely have same values for each possible outcome.
- - Its **outcome `θ`** will be: `n` dimensional vector corresponding to some pmf over n possible outcomes: `c(θ_1, θ_2, θ_3) where θ_1 + θ_2 + θ_3 = 1`
-It's a distribution over `n` dimensional vectors called "θ". It can be thought of as a multivariate beta distribution for a collection of probabilities (that must sum to 1). 
- - Dirichlet distribution is the conjugate prior for the **multinomial likelihood**.
- - Each `θ_i` has its own `α`...weight(scale) for each distribution of `θ_i`
- - Each `θ_i` has its own distribution...so each is a function???????
- - Total sum of `θ_i` is 1.
-<img src="https://user-images.githubusercontent.com/31917400/73609223-77daf900-45c3-11ea-97b6-52158fec1ba0.png" />
+    
+ - Its **outcome `θ`** will be `k` dimensional vector such as `c(θ_1, θ_2, θ_3) where θ_1 + θ_2 + θ_3 = 1`
+   - Each `θ_i` has its own `α`...weight(shape) for each distribution of `θ_i`
+   - Each `θ_i` has its own distribution...???????
 
 ### Question! 
  - Automatic Hyperparameter Estimation? (determining parameter size??) 
