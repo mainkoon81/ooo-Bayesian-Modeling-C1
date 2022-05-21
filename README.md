@@ -33,8 +33,9 @@ The benefit of using the Nonparametric estimator is that there are no assumption
 
 
 ## > Dirichlet Story
-### Dirichlet eats `α` and spits `θ`!
-Dirichlet Distribution is a distribution on multinomial pmf. It is a generalized beta distribution. 
+### Beta eats `α`, `β` and spits out `θ`.
+### Dirichlet eats `α1`,`α2`,`α3`... and spits `θ1`,`θ2`,`θ3`,...
+Dirichlet Distribution is a generalized beta distribution. Beta(`α`, `β`) prior takes Bin(n, p) likelihood while Dirichlet(`α1`,`α2`,`α3`...) prior takes Multinom(n, `p1`,`p2`,`p3`...) likelihood.    
 <img src="https://user-images.githubusercontent.com/31917400/73676146-c663c280-46ab-11ea-9752-f8a276cb8c20.jpg" />
 
  - Its **parameter `α`** will be: `n` dimensional vector which is not a pmf, but just a bunch of numbers: `c(α1, α2, α3)`  
