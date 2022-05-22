@@ -153,11 +153,10 @@ plt.plot(X_test, f_prior)
    - Each `θ_i` has its own `α`...weight(shape) for each distribution of `θ_i`
    - Each `θ_i` has its own distribution...???????
 
-### Question! 
- - Automatic Hyperparameter Estimation? (determining parameter size??) 
- - From GMM, how to **get a control over** the latent variable(with multinomial) dynamically? We want to automatically find the **parameter**(proportions) of the latent variable at the end. 
-   - The `plate notation` refers to **Random Variables** otherwise parameters. 
- <img src="https://user-images.githubusercontent.com/31917400/75390560-5cbc8a00-58e0-11ea-931d-6edafda8444c.jpg" />
+### so what? 
+How to **get a control over** the `multiple membership`(?) dynamically? 
+ - The `plate notation` refers to **Random Variables** otherwise parameters. 
+ <img src="https://user-images.githubusercontent.com/31917400/169688967-9c6629e1-ad13-4811-89dd-bac3193111d1.jpg" />
 
    - ### The membership pool "Z" can be expressed in two ways: 
      - 1.Collection of the cluster parameters `μ` and `Σ` 
