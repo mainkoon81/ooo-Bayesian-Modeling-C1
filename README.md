@@ -168,12 +168,12 @@ Gaussian Mixture example
        - ![formula](https://render.githubusercontent.com/render/math?math=\pi_i=\theta_i)
        - In Dirichlet Mixture, ![formula](https://render.githubusercontent.com/render/math?math=Z=(\theta_1,\theta_2,...)). It's a random clustering case..so it can vary! Z, Z, Z, Z,...all different..     
      - Gaussian Mixture vs Dirichlet Mixture
-       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~N(Z_k)): `Likelihood` (This is for Gaussian Mixture)
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=((\mu_1,\Sigma_1),(\mu_2,\Sigma_2),..)~NormaInverseWishart(\mu_0,\kappa_0,\nu_0,\nu_0\Sigma_0)): `prior` (This is for Gaussian Mixture)
-       - ![formula](https://render.githubusercontent.com/render/math?math=x_i~Multi(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
-       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dir(\alpha_1,\alpha_2,..\alpha_k)) : `Prior` (This is for Dirichlet Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=y_1,y_2,...y_i~MVN(Z_k)): `Likelihood` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=((\mu_1,\Sigma_1),(\mu_2,\Sigma_2),..)~normalInverseWishart(\mu_0,\kappa_0,\nu_0,\nu_0\Sigma_0)): `prior` (This is for Gaussian Mixture)
+       - ![formula](https://render.githubusercontent.com/render/math?math=y_1,y_2,...y_i~Multinom(Z_k)) : `Likelihood` (This is for Dirichlet Mixture) 
+       - ![formula](https://render.githubusercontent.com/render/math?math=Z_k=(\theta_1,\theta_2,...\theta_k)~Dirichlet(\alpha_1,\alpha_2,..\alpha_k)) : `Prior` (This is for Dirichlet Mixture) 
        - Multinomial + Dirichlet conjugate relation tells us our parameter value(posterior) can be updated by the introduction of new data(likelihood)! We can get all latent variable with the help of sampling `θ` from Dirichlet prior! So it seems we can easily get the posterior, thus our `θ` ("mixing coefficients" or "obv-proportion" for every Gaussians) at the end. Done and dusted! We now have the model describing our data! Wait! However, is their occurance accurate? How to address the hyperparameter α that affects the sampling result ?
-       <img src="https://user-images.githubusercontent.com/31917400/73765204-1e61fe00-476c-11ea-8bb5-3fbbb7161549.jpg" />
+       <img src="https://user-images.githubusercontent.com/31917400/169690028-97deca2d-240c-4866-9005-9d7e1ed5f039.jpg" />
      
    - ### How are you gonna deal with **`α`** and what if `k` goes to infinity? 
    
@@ -184,11 +184,8 @@ Gaussian Mixture example
  - : Random(stochastic) Process: Random Process is an event or experiment that has a random outcome, so you can’t predict accurately. In a deterministic process, if we know the initial condition (starting point) of a series of events, we can then predict the next step in the series. Instead, in stochastic processes, although we know the initial condition, we **can't determine with full confidence** what are going to be the next steps. That’s because there are so many(or infinite!) different ways the process might evolve. How smoke particles collide with each other? Their unpredictable movements and collisions are random and are referred to as Brownian Motion. **Interest rate is a variable that changes its value over time. It is not straightforward to forecast its movements.** - ex) Gaussian_P, Drichlet_P, Poisson_P, Brownian motion_P, Markov decision_P, etc... Markov Chain is also random process(resulting random ouput) in which the effect of the past on the future is only summarized by the current state.  
 
 -------------------------------------------------------------------------------------------------
-# B. Dirichlet Process and hyperparameter estimation???
-Multivariate Multinomial Distribution is your samples?? Data pt labeling? `Z`?
-<img src="https://user-images.githubusercontent.com/31917400/75352237-5529c080-58a1-11ea-8161-4a22705d4981.jpg" />
-
-For the time being, forget about the labeling because if K goes to infinity, our "Z case" becomes random variable. Now it's time for Random Process! What is DP in general? 
+# B. Dirichlet Process and `α`, `G_0`
+First, assume you have data that follows some **unknown mixture distribution**. so we want `mixing coefficeint`(proportion), and other distribution specific certain `parameters` for each **mixture components** (cluster). For the time being, forget about the labelling the membership because if K goes to infinity, our "Z case" becomes random variable. Now it's time for Random Process! Ok...What on earth is DP ? It seems both are `distributions of certain scenarios`.  
 <img src="https://user-images.githubusercontent.com/31917400/75455380-4ca0bb00-5971-11ea-911b-d49c05eed940.jpg" />
 
 ### What is DP?
