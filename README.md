@@ -155,8 +155,8 @@ plt.plot(X_test, f_prior)
 
 ### so what? 
 How to **get a control over** the `multiple membership`(?) dynamically? 
- - The `plate notation` refers to **Random Variables** otherwise parameters. 
- <img src="https://user-images.githubusercontent.com/31917400/169688967-9c6629e1-ad13-4811-89dd-bac3193111d1.jpg" />
+ -(note): The `plate notation` refers to **Random Variables** otherwise parameters. 
+ <img src="https://user-images.githubusercontent.com/31917400/169689237-647c1da7-ce61-47c7-9ba1-8e5c9280184a.jpg" />
 
    - ### The membership pool "Z" can be expressed in two ways: 
      - 1.Collection of the cluster parameters `μ` and `Σ` 
