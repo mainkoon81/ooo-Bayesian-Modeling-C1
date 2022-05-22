@@ -154,8 +154,9 @@ plt.plot(X_test, f_prior)
    - Each `θ_i` has its own distribution...???????
 
 ### so what? 
-How to **get a control over** the `multiple membership`(?) dynamically? 
- -(note): The `plate notation` refers to **Random Variables** otherwise parameters. 
+Gaussian Mixture example
+ - How to **get a control over** the `multiple membership`(?) dynamically? 
+ - Note that the `plate notation` refers to **Random Variables**. 
  <img src="https://user-images.githubusercontent.com/31917400/169689237-647c1da7-ce61-47c7-9ba1-8e5c9280184a.jpg" />
 
    - ### The membership pool "Z" can be expressed in two ways: 
