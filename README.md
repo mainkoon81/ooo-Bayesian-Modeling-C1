@@ -189,27 +189,22 @@ First, assume you have data that follows some **unknown mixture distribution**. 
 
 - The **G_0** is the `joint distribution of the parameters for a potential new cluster` for an observation to enter. The new cluster is initially empty, so there is no data that could be used to determine the **posterior estimate of the parameters**. Hence, we instead draw parameters from the **prior distribution G_0** to determine estimates for the parameters, which then get used in the calculations of the probability of entering that cluster. If a new cluster is indeed selected, then the **G_0 is discarded** and a new `δ_Φ` is created for a brand new cluster. Then this new `δ_Φ` is used as the distribution for probability calculations, parameter updates, etc, for future observations that may want to enter that cluster. **G_0** would be used again for another new cluster if necessary. 
 
+- **Q.** then...the initial importance weight of **G_0** is determined by **`α`**? **`α`** is also probability or just values sampled from some algorithm?   
+- **Q.** what about G_0(A1), G_0(A2),...they are AUC. **`α`** affects AUC? AUC are not importance weight? which stage the partition of AUC occurs?
+- **Q.** G_0(A) is AUC and it is also Expected value of G(A)? then..it's not about the cluster proportion? Can we see this the information on the cluster A ?
+- **Q.** G_0(A) vs G(A) ?? prior vs posterior ?? **A** indicates the cluster index? so G(A) is a component of G?
+- **Q.** `α` controls the concentration around the mean (larger α makes the concentration tighter). The variance of the DP will be smaller as we choose a larger **α**?
+- **Q.** why the output **G** is denoted with ``Summation"? why not a collection of `δ_Φ` ? The summation implies a solid, stand-alone scenario (Mixture Model)?
+- **Q** How to control hyperparameter `α` or (cluster size)? We want to get a control over our latent variable = `cluster proportion`? The latent variable dimensionality is unknown. The latent variable parameter **θ**(`cluster proportion`) can be controlled by the **hyperparameter `α`**? But how are you gonna control the **hyperparameter `α`**?
+
 
 ### What is DP?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **collection of cluster information**(parameters): (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional DD parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). In other words, DP can sample all possible highly likely **`scenarios of mixture setup`** (mixture models ???) that describes your complex data.  
 
-### Why you want "G"?
-It's a possible probability distribution over each **cluster proportions** `θ`. It says probabilities of each cluster proportion(`G(A_1)`:prob of the `θ1`, `G(A_2)`:prob of the `θ2`,..`G(A_k)`:prob of the `θk`). It says how much a certain cluster with unique proportion can **suck** when new data point arrives. Each cluster-proportioning scheme **G** is sampled from Dirichlet Distribution. From G, we can sample `Cluster Information` such as "proportion" ![formula](https://render.githubusercontent.com/render/math?math=\theta_k), or "location" ![formula](https://render.githubusercontent.com/render/math?math=\mu_k,\Sigma_k). Then we can build the generative clusters to sample new data points.  
-<img src="https://user-images.githubusercontent.com/31917400/75459230-f9316b80-5976-11ea-9a2f-362b927c83bb.jpg" />
+### Clustering example
+<img src="https://user-images.githubusercontent.com/31917400/170001808-e773779e-adad-4ce2-aaeb-10cbeb142400.jpg" />
 
-### Why from G0?
- - `G0` is the mean of **DP(α, `G0`)**. It's a centering distribution.
-   - If we sample **G**, a sequence of multiple distributions(clusters: G(A1),G(A2),..), from the DP, the **average of the whole process** will be the Gaussian: `E[G(A)] = N(0,1) = G0`.
-   - `α` controls the concentration arount the mean (larger α makes the concentration tighter). The variance of the DP will be smaller as we choose a larger **α**. 
-   - For example, let ![formula](https://render.githubusercontent.com/render/math?math=G_0)=N(0,1) and **α** be an arbitrary positive number. From ![formula](https://render.githubusercontent.com/render/math?math=G_0)(Gaussian), **we are sampling a random temporary value** ![formula](https://render.githubusercontent.com/render/math?math=\Phi_k). 
- 
-### How to control hyperparameter(cluster size)????
-We want to get a control over our latent variable. The latent variable dimensionality is unknown. The latent variable parameter `θ`(generated from the Dirichlet Sampling) can be controlled by the **hyperparameter `α`**. But how are you gonna control the **hyperparameter `α`**?
- - "We assign base probability(pmf `G0` or `H` which is `E[G(A_k)]`) to each hyperparameter element: (`α1`,`α2`,`α3`...) in Dirichlet"!
- - Think of the "labels" as a particular random value drawn from the `G(A)`. i.e., all the random variables in a same category share the same value(label), and the values(labels) are distributed according to our chosen base distribution `G(A)`. Now we need to get a control over such **probability assigning mechanism** in Dirichlet. Assuming an infinite number of hyperparameter elements,...an infinite number of multinomial probability values(parameters),...thus, we can think of an infinite number of partitions - A1, A2, A3... 
- - At the end of the day, the hyperparameter control(probability space partitioning to assign to hyperparameter) can be done by manipulating **`prior`** (samples from **Dir(`α1*E[G(A1)]`,`α2*E[G(A2)]`,`α3*E[G(A3)]`...)**, then we obtain final posterior for the latent variable's parameter `θ` by using the updated likelihood (which basically saying how many data pt belongs to which probability partition).
 
-So far, we have discussed what is DP. 
 
 ### How to decide the membership of new data pt? 
 At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior, i.e. We want to sample the "function" **G**(distribution over proportions of each `θ` as a random "clustering scheme") from prior: DP(`α`, `G0`). 
@@ -245,7 +240,7 @@ The main goal of clustering is to find the posterior distribution **P(![formula]
      - Gibbs Sampling should use the exchangeability coz...its sampling is carried out one label by one label...so can ignore labeling order. 
      <img src="https://user-images.githubusercontent.com/31917400/74452857-86ee6080-4e79-11ea-8676-5b0357881917.jpg" />
 
-## C. Dirichlet Process Mixture Model   
+### DP Mixture Model:   
 **G** from DP is `discrete` with probability "1", thus DP would not be a suitable prior distribution for the situations with continuous data coz in this case, we want continuous **G**. Let's think about mixture models. Mixture models are widely used for **density estimation** and classification problem. A natural idea is to create a prior for `continuous` densities via a mixture where the mixing distribution **G** is given a Dirichlet process prior. As a natural way to increase the applicability of DP-based modeling, we can use DP as a prior for the mixing distribution in a mixture model with a `parametric kernel distribution`. 
 
 The posterior under a DPMM is effectively finite-dimensional, though the dimension is adaptive, determined by data, as opposed to fixed like in the parametric models. This **adaptive dimensionality** is what gives the model its flexibility and its effective **finite-dimensionality** is what makes posterior computation possible.
