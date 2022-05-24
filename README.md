@@ -193,7 +193,7 @@ First, assume you have data that follows some **unknown mixture distribution**. 
 - **Q.** `α` controls the concentration around the mean (larger α makes the concentration tighter). The variance of the DP will be smaller as we choose a larger **α**? How to control `α` or (cluster size)? We want to get a control over our latent variable = `cluster proportion`? The latent variable dimensionality is unknown. The latent variable parameter **θ**(`cluster proportion`) can be controlled by the **`α`**? 
 - **Q.** G_0 is a joint prior distribution. `Φ` is a random variable of G_0. G_0(A) is AUC. **`α`** affects AUC? AUC are not importance weight? which stage the partition of AUC occurs? and what samples the AUC? **A** indicates the cluster index? G_0(A) is AUC and it is also Expected value of G(A)? then..it's not about the cluster proportion??
 - **Q.** **G_0(A)** vs **G(A)** ?? `prior` vs `predictive distribution` that are equipped with posterior parameter and new likelihood data entering. 
-- **Q.** why the output **G** is denoted with ``Summation"? why not a collection of `δ_Φ` ? The summation implies a solid, stand-alone scenario (Mixture Model)? so... G(A) is a component of G? so at the end...G is a predictive distribution?
+- **Q.** why the output **G** is denoted with ``Summation"? why not a collection of `δ_Φ` ? The summation implies a solid, stand-alone scenario (Mixture Model)? so... G(A) is a component of G? so at the end...G is again...a predictive distribution?
 
 
 
