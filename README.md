@@ -153,7 +153,7 @@ plt.plot(X_test, f_prior)
    - Each `θ_i` has its own `α`...weight(shape) for each distribution of `θ_i`
    - Each `θ_i` has its own distribution...???????
 
-### so what? 
+## What Components ? 
 Gaussian Mixture example
  - How to **get a control over** the `multiple membership`(?) dynamically? 
  - Note that the `plate notation` refers to **Random Variables** (`multiple membership`). 
@@ -185,13 +185,13 @@ Gaussian Mixture example
 
 -------------------------------------------------------------------------------------------------
 # B. Dirichlet Process and `α`, `G_0`
-First, assume you have data that follows some **unknown mixture distribution**. so we want to estimate `mixing coefficeint`(proportion), and other distribution specific certain `parameters` for each **mixture components** (cluster). For the time being, forget about the labelling the membership because if K goes to infinity, our "Z case" (Scenarios) becomes random variable. Now it's time for Random Process! Ok...What on earth is DP ? It seems both DD, DP are `distributions of certain scenarios`. <img src="https://user-images.githubusercontent.com/31917400/169717942-71fb17ba-c8a8-4bfc-a728-b9cfb4d64fc2.jpg" />
+First, assume you have data that follows some **unknown mixture distribution**. so we want to estimate `mixing coefficeint`(proportion), and other distribution specific certain `parameters` for each **mixture components** (cluster). For the time being, forget about the labelling the membership because if K goes to infinity, our "Z case" (Scenarios) becomes random variable. Now it's time for Random Process! Ok...What on earth is DP ? It seems both DD, DP are `distributions of certain scenarios`. <img src="https://user-images.githubusercontent.com/31917400/169992537-781b8fd9-e794-498c-a6cb-ebaa575bffb9.jpg" />
 
 - The **G_0** is the `joint distribution of the parameters for a potential new cluster` for an observation to enter. The new cluster is initially empty, so there is no data that could be used to determine the **posterior estimate of the parameters**. Hence, we instead draw parameters from the **prior distribution G_0** to determine estimates for the parameters, which then get used in the calculations of the probability of entering that cluster. If a new cluster is indeed selected, then the **G_0 is discarded** and a new `δ_Φ` is created for a brand new cluster. Then this new `δ_Φ` is used as the distribution for probability calculations, parameter updates, etc, for future observations that may want to enter that cluster. **G_0** would be used again for another new cluster if necessary. 
 
 
 ### What is DP?
-For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **collection of cluster information**(parameters): (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional DD parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). 
+For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **collection of cluster information**(parameters): (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional DD parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). In other words, DP can sample all possible highly likely **`scenarios of mixture setup`** (mixture models ???) that describes your complex data.  
 
 ### Why you want "G"?
 It's a possible probability distribution over each **cluster proportions** `θ`. It says probabilities of each cluster proportion(`G(A_1)`:prob of the `θ1`, `G(A_2)`:prob of the `θ2`,..`G(A_k)`:prob of the `θk`). It says how much a certain cluster with unique proportion can **suck** when new data point arrives. Each cluster-proportioning scheme **G** is sampled from Dirichlet Distribution. From G, we can sample `Cluster Information` such as "proportion" ![formula](https://render.githubusercontent.com/render/math?math=\theta_k), or "location" ![formula](https://render.githubusercontent.com/render/math?math=\mu_k,\Sigma_k). Then we can build the generative clusters to sample new data points.  
