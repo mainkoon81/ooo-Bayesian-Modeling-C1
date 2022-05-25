@@ -198,14 +198,8 @@ First, assume you have data that follows some **unknown mixture distribution**. 
 ### What is DP?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **collection of cluster information**(parameters): (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional DD parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). In other words, DP can sample all possible highly likely **`scenarios of mixture setup`** (mixture models ???) that describes your complex data.  
 
-### Clustering example
+### How to decide the membership of new data pt? Clustering example:
 <img src="https://user-images.githubusercontent.com/31917400/170324295-6bbe4cfd-403d-4df3-b016-5107c614d6c9.jpg" />
-
-
-
-### How to decide the membership of new data pt? 
-At the end of the day, the constructing(estimating) cluster is done by sampling. For sampling, we need the DP prior, i.e. We want to sample the "function" **G**(distribution over proportions of each `θ` as a random "clustering scheme") from prior: DP(`α`, `G0`). 
-<img src="https://user-images.githubusercontent.com/31917400/75469279-a495ec80-5986-11ea-8a39-f66d176a9270.jpg" />
 
 We can construct the DP prior, using Non-parametric **prior construction** scheme, then assign a membership to new data.  
  - Sol 1) Stick-Breaking scheme(**creating "G" distribution**)
@@ -228,6 +222,15 @@ We can construct the DP prior, using Non-parametric **prior construction** schem
    - Rich get richer...  popular table..
    - No fixed size of labels with a fixed size of data instances
    <img src="https://user-images.githubusercontent.com/31917400/74458192-3ed33c00-4e81-11ea-928c-8d06879909de.jpg" />
+
+
+
+
+
+
+
+
+
 
 ### Inference:
 The main goal of clustering is to find the posterior distribution **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|x)** of the cluster assignments! Computing this is intractable due to the sum in the denominator and the growing number of partitions. That's why we use Gibbs Sampling. Let's say..given the previous partition ![formula](https://render.githubusercontent.com/render/math?math=\pi_n), we remove one data pt `x` from the partition (prior) then re-added to the partition (likelihood) to obtain posterior: **P(![formula](https://render.githubusercontent.com/render/math?math=\pi_n)|`x`)**. This gives **new partition** (prior)! 
