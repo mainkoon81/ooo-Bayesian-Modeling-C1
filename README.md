@@ -199,11 +199,14 @@ First, assume you have data that follows some **unknown mixture distribution**. 
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **collection of cluster information**(parameters): (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional DD parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). In other words, DP can sample all possible highly likely **`scenarios of mixture setup`** (mixture models ???) that describes your complex data.  
 
 # [Note]
-The following two steps make one iteration. 
+The following three steps make one iteration. 
 - Step 1. **Clustering** (Accept/Reject G_0's suggestion) 
-  - The cluster proportions(`π1`,`π2`,`π3`...`πk`) are defined as it goes...as data pt decide where to move in based on the probability comaprison described below. 
+  - The cluster proportions(`π1`,`π2`,`π3`...`πk`) are defined as it goes...(as data pt decide where to move in based on the probability comaprison described below). 
+  - In this stage, **cluster memberships**(k) are fully defined. 
+
 - Step 2. **Likelihood Estimation** (**Likelihood** development based on the prior suggestion)
   - Given the data points in each clusters, some extra strategies (such as imputation for missing data, etc.) can be implemented to refine the lieklihood.  
+
 - Step 3. **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
   - Note that in the parameter estimation stage, you need to have a **complete data!** 
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
