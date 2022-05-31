@@ -200,10 +200,11 @@ For any partition ![formula](https://render.githubusercontent.com/render/math?ma
 
 # [Note]
 The following two steps make one iteration. 
-- Step 1. Clustering (**Likelihood** development based on the prior suggestion)
+- Step 1. Clustering (Accept/Reject G_0's suggestion) 
   - The cluster proportions(`π1`,`π2`,`π3`...`πk`) are defined as it goes...as data pt decide where to move in based on the probability comaprison described below. 
-
-- Step 2. Parameter Re-Estimation (**Posterior** development based on the likelihood)
+- Step 2. Likelihood Estimation (**Likelihood** development based on the prior suggestion)
+  - Given the data points in each clusters, some extra strategies (such as imputation for missing data, etc.) can be implemented to refine the lieklihood.  
+- Step 3. Parameter Re-Estimation (**Posterior** development based on the likelihood)
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
 
 ### How to decide the membership of new data pt? 
