@@ -206,14 +206,11 @@ The following two steps make one iteration.
 - Step 2. Parameter Re-Estimation (**Posterior** development based on the likelihood)
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
 
-
-
-
-
-
-
 ### How to decide the membership of new data pt? 
 <img src="https://user-images.githubusercontent.com/31917400/170324295-6bbe4cfd-403d-4df3-b016-5107c614d6c9.jpg" />
+
+### missing Data strategy
+<img src="https://user-images.githubusercontent.com/31917400/171165564-e3cf81b7-499a-4233-94fc-bde75bbe988f.jpg" />
 
 
 
