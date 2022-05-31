@@ -205,6 +205,7 @@ The following two steps make one iteration.
 - Step 2. **Likelihood Estimation** (**Likelihood** development based on the prior suggestion)
   - Given the data points in each clusters, some extra strategies (such as imputation for missing data, etc.) can be implemented to refine the lieklihood.  
 - Step 3. **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
+  - Note that in the parameter estimation stage, you need to have a **complete data!** 
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
 
 ### How to decide the membership of new data pt? 
