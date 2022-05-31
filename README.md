@@ -198,10 +198,32 @@ First, assume you have data that follows some **unknown mixture distribution**. 
 ### What is DP?
 For any partition ![formula](https://render.githubusercontent.com/render/math?math=A_1,...,A_K) of the support of `G0`, of any size `K`, the **collection of cluster information**(parameters): (![formula](https://render.githubusercontent.com/render/math?math=G(A_1),...,G(A_K))) follows a **Dirichlet distribution** with k-dimensional DD parameters ![formula](https://render.githubusercontent.com/render/math?math=\alpha*G_0(A_1),...,\alpha*G_0(A_K)). In other words, DP can sample all possible highly likely **`scenarios of mixture setup`** (mixture models ???) that describes your complex data.  
 
-### How to decide the membership of new data pt? Clustering example:
+# [Note]
+The following two steps make one iteration. 
+- Step 1. Clustering (**Likelihood** development based on the prior suggestion)
+  - The cluster proportions(`π1`,`π2`,`π3`...`πk`) are defined as it goes...as data pt decide where to move in based on the probability comaprison described below. 
+
+- Step 2. Parameter Re-Estimation (**Posterior** development based on the likelihood)
+  - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
+
+
+
+
+
+
+
+### How to decide the membership of new data pt? 
 <img src="https://user-images.githubusercontent.com/31917400/170324295-6bbe4cfd-403d-4df3-b016-5107c614d6c9.jpg" />
 
-We can construct the DP prior, using Non-parametric **prior construction** scheme, then assign a membership to new data.  
+
+
+# Story on `α`
+## Classic
+Escobar and West developed the posterior distribution for the DP prior: `α` as follows:
+<img src="https://user-images.githubusercontent.com/31917400/171143039-e3e1326a-0b80-408c-9345-d526c0538520.jpg" />
+
+## Others
+We can construct the DP prior: `α` (Suggestion Reliability), using Non-parametric **prior construction** scheme. 
  - Sol 1) Stick-Breaking scheme(**creating "G" distribution**)
    - : Big `α` results in big sticks while small `α` results in small sticks.
  - Sol 2) Chinese-Restaurant scheme(**assigning membership to new point**)
