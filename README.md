@@ -1,4 +1,4 @@
-# ooo-Minkun-Model-Collection-V-
+# ooo-Minkun-Bayesian-Model-CI
 Non-parametric Bayesian Model
  - GP
  - DP
