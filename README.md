@@ -1,4 +1,4 @@
-# ooo-Minkun-Bayesian-Model-CI
+# ooo-Minkun-Bayesian-Modeling-C1
 Non-parametric Bayesian Model
  - GP
  - DP
