@@ -6,10 +6,10 @@ Non-parametric Bayesian Model
 ### Random process is a collection of random variables labeled(indexed) by `t`.  
  - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
  - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
-   <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" width="60%" height="60%" />
 
  - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
-   <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" width="80%" height="80%" />
 
 > ## But how Random Process can deal with infinite hyper-parameter?
 parameter size VS parameter value ???
@@ -32,10 +32,12 @@ Before using Gaussian Processes, you have two main questions:
    - ex) if you know f(1) = A, do you have any good intuition about what that makes you think f(4) is? This is crucial for picking a reasonable covariance function. It’s useful when you want a measure of uncertainty about your predictions instead of just a point estimate. "What’s the probability that f(4) is between 2 and 7?"  then a Gaussian process with a linear-kernel would make sense.
 
 **GP** on `S` refers to a bunch of random variables(with pdf: `f(x)`) on `S`... whose index is the member of the set `S` such that they can have the following properties: The bunch of variables ![formula](https://render.githubusercontent.com/render/math?math=x_n) with pdf functions: f(![formula](https://render.githubusercontent.com/render/math?math=x_n)) are normally multivariate distributed, thus GP outputs from the **mean function** and **cov function (kernel function)**! Gaussian process is parameterized by the `mean vector` and the `covariance matrix`.
-<img src="https://user-images.githubusercontent.com/31917400/76784936-7731a700-67ac-11ea-8170-d25a73254c94.jpg" /> 
+
+<img src="https://user-images.githubusercontent.com/31917400/76784936-7731a700-67ac-11ea-8170-d25a73254c94.jpg" width="80%" height="80%" /> 
 
 Kernel helps us obtain customized samples in the random process. And if we keep increasing the value of bandwidth in the kernel, we'll have almost **constant functions**...weighted evenly???? 
-<img src="https://user-images.githubusercontent.com/31917400/75114699-439daa00-5650-11ea-962d-608bb877a093.jpg" /> 
+
+<img src="https://user-images.githubusercontent.com/31917400/75114699-439daa00-5650-11ea-962d-608bb877a093.jpg" width="60%" height="60%" /> 
 
 > ## But for what do we need such customized(weighted) samples? 
 
@@ -55,11 +57,11 @@ To make the prediction, take the point (x, f(x)), then try to generate the mean 
  - Case 01> Too noisy observations:
    - Add the **independent Gaussian noise** to all RVs.
      - we don't have the `0 variance` data points anymore. And also the **mean function became a bit smoother**.
-     <img src="https://user-images.githubusercontent.com/31917400/76793814-a6044900-67bd-11ea-9e1a-bbd5e017c0c9.jpg" /> 
+     <img src="https://user-images.githubusercontent.com/31917400/76793814-a6044900-67bd-11ea-9e1a-bbd5e017c0c9.jpg" width="60%" height="60%" /> 
 
    - Hey, we can change the parameters(bandwidth of kernel, variance of GP, variance of noise) of the kernel a bit, and find the optimal values for them, in this special case. 
      - Parameter Optimization using Maximum Likelihood Estimation  
-     <img src="https://user-images.githubusercontent.com/31917400/76794907-f9779680-67bf-11ea-96d0-2982a05dd48b.jpg" /> 
+     <img src="https://user-images.githubusercontent.com/31917400/76794907-f9779680-67bf-11ea-96d0-2982a05dd48b.jpg" width="60%" height="60%" /> 
 
 
  - Case 02> Inducing Input
@@ -104,7 +106,7 @@ plt.plot(X_test, f_prior)
  - Dirichlet Distribution is a generalized beta distribution.
  - `α1`,`α2`,`α3`... are shape parameters.
  - **Dirichlet(`α1`,`α2`,`α3`...) prior** takes Multinom(n, `θ1`,`θ2`,`θ3`...) likelihood.
- <img src="https://user-images.githubusercontent.com/31917400/169688590-af305404-bf2b-41bc-9f34-37fc012d44c6.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/169688590-af305404-bf2b-41bc-9f34-37fc012d44c6.jpg" width="60%" height="60%" />
 
  - Its **parameter `α`** will be a shape vector.  
    - if α1,α2,α3 are all the same, then the outcome(`θ_i`) appears uniformly.  
@@ -122,7 +124,7 @@ plt.plot(X_test, f_prior)
 Gaussian Mixture example
  - How to **get a control over** the `multiple membership`(?) dynamically? 
  - Note that the `plate notation` refers to **Random Variables** (`multiple membership`). 
- <img src="https://user-images.githubusercontent.com/31917400/169689237-647c1da7-ce61-47c7-9ba1-8e5c9280184a.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/169689237-647c1da7-ce61-47c7-9ba1-8e5c9280184a.jpg" width="60%" height="60%"/>
 
    - ### The membership pool "Z" can be expressed in two ways: 
      - 1.Collection of the cluster parameters `μ` and `Σ` 
