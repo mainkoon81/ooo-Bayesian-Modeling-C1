@@ -185,7 +185,19 @@ The following three steps make one iteration.
 Once all missing data in all covariates has been imputed, then the prameters of each cluster (X`β`, `σ^2`) are re-calculated. After this parameter has been updated, the clustering process is performed and in the parameter Re-estimation stage, the previous imputed data is discarded and the sampling for the imputation starts over in the next iteration. This means... `missing data do not impact on the clustering process whatsoever in the iteration`.  Aslo note that when calculating the predictive distribution, we integrate out the covariates that are missing, thus remove these two missing covariates from the `x` term that is being conditioned on: `p(y|X, θ)` => `p(y|x1,x4,θ)`. 
 
 # > Detail III. measurement Error strategy
+## - Mismeasured Continuous Predictor
+### - 1) Base Method
+For a starter,  
 
+
+### - 2) DP Incorporation
+
+
+
+## - Mismeasured Binary Predictor
+### - 1) Base Method
+
+### - 2) DP Incorporation
 
 
 
