@@ -192,12 +192,19 @@ Once all missing data in all covariates has been imputed, then the prameters of 
 For a starter,  
 
 
+
+
 ### - 2) DP Incorporation
+
 
 
 
 ## - Mismeasured Binary Predictor
 ### - 1) Base Method
+For a starter, 
+
+
+
 
 ### - 2) DP Incorporation
 
