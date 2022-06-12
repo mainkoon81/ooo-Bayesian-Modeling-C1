@@ -175,7 +175,7 @@ The following three steps make one iteration.
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
 
 # > Detail I. IntraCorrelation strategy 
-<img src="https://user-images.githubusercontent.com/31917400/172922179-36f9223b-7016-417c-84b5-e162cea1cf8d.jpg" width="90%" height="90%" />
+<img src="https://user-images.githubusercontent.com/31917400/173237731-f3150a14-c6c6-48c5-b04a-864c0542b3a3.jpg" width="90%" height="90%" />
 
 # > Detail II. missing Data strategy
 <img src="https://user-images.githubusercontent.com/31917400/171606797-4739b410-d045-4c17-9883-0ef35886e5ee.jpg" width="70%" height="70%" />
