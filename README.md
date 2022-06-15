@@ -198,13 +198,7 @@ The goal is to find the distribution of the clean covariate!
 
 
 ## - Mismeasured Binary Predictor
-### - 1) Base Method
-For a starter, 
-
-
-
-
-### - 2) DP Incorporation
+t.b.d....
 
 
 
