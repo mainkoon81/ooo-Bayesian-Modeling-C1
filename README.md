@@ -186,6 +186,8 @@ Once all missing data in all covariates has been imputed, then the prameters of 
 ## - Mismeasured Continuous Predictor
 ### - 1) Base Method
 For a starter,  
+<img src="https://user-images.githubusercontent.com/31917400/173791947-19fa5d87-8378-4665-b88b-0f67fc294137.jpg" width="70%" height="70%" />
+<img src="https://user-images.githubusercontent.com/31917400/173792687-5e5f3a77-9c86-43c4-867f-a005ca9e6053.jpg" width="100%" height="100%" />
 
 
 
