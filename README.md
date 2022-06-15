@@ -185,9 +185,9 @@ Once all missing data in all covariates has been imputed, then the prameters of 
 # > Detail III. measurement Error strategy
 ## - Mismeasured Continuous Predictor
 ### - 1) Base Method
-For a starter,  
+The goal is to find the distribution of the clean covariate!  
 <img src="https://user-images.githubusercontent.com/31917400/173791947-19fa5d87-8378-4665-b88b-0f67fc294137.jpg" width="70%" height="70%" />
-<img src="https://user-images.githubusercontent.com/31917400/173792687-5e5f3a77-9c86-43c4-867f-a005ca9e6053.jpg" width="100%" height="100%" />
+<img src="https://user-images.githubusercontent.com/31917400/173794745-07081fd9-d549-406a-8d99-e520d2966c89.jpg" width="100%" height="100%" />
 
 
 
