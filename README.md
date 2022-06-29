@@ -178,7 +178,7 @@ The following three steps make one iteration.
 <img src="https://user-images.githubusercontent.com/31917400/173237731-f3150a14-c6c6-48c5-b04a-864c0542b3a3.jpg" width="90%" height="90%" />
 
 # > Detail II. missing Data strategy
-<img src="https://user-images.githubusercontent.com/31917400/171606797-4739b410-d045-4c17-9883-0ef35886e5ee.jpg" width="70%" height="70%" />
+<img src="https://user-images.githubusercontent.com/31917400/176428959-3b27b335-4f96-4c4c-b785-a16106c51268.jpg" width="70%" height="70%" />
 
 Once all missing data in all covariates has been imputed, then the prameters of each cluster (X`β`, `σ^2`) are re-calculated. After this parameter has been updated, the clustering process is performed and in the parameter Re-estimation stage, the previous imputed data is discarded and the sampling for the imputation starts over in the next iteration. This means... `missing data do not impact on the clustering process whatsoever in the iteration`.  Aslo note that when calculating the predictive distribution, we integrate out the covariates that are missing, thus remove these two missing covariates from the `x` term that is being conditioned on: `p(y|X, θ)` => `p(y|x1,x4,θ)`. 
 
