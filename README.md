@@ -164,7 +164,7 @@ A **collection of cluster information**(parameters): (![formula](https://render.
 # [Note]
 The following three steps make one iteration. 
 - Step 1. **Clustering** (Accept/Reject G_0's suggestion) 
-  - The cluster proportions(`π1`,`π2`,`π3`...`πk`) are defined as it goes...(as data pt decide where to move in based on the probability comaprison described below). 
+  - The cluster proportions(`π1`,`π2`,`π3`...`πk`) are defined as it goes...(as data pt decide where to move in based on the probability comparison). 
   - In this stage, **cluster memberships**(k) are fully defined. 
 
 - Step 2. **Likelihood Estimation** (**Likelihood** development based on the prior suggestion)
