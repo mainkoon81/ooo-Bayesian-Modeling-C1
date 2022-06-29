@@ -186,8 +186,7 @@ Once all missing data in all covariates has been imputed, then the prameters of 
 ## - Mismeasured Continuous Predictor
 ### - 1) Base Method
 The goal is to find the distribution of the clean covariate!  
-<img src="https://user-images.githubusercontent.com/31917400/173791947-19fa5d87-8378-4665-b88b-0f67fc294137.jpg" width="70%" height="70%" />
-<img src="https://user-images.githubusercontent.com/31917400/173794745-07081fd9-d549-406a-8d99-e520d2966c89.jpg" width="100%" height="100%" />
+<img src="https://user-images.githubusercontent.com/31917400/176433381-54d4de40-aaf1-48e2-92b5-2418841caa45.jpg" width="70%" height="70%" />
 
 
 
