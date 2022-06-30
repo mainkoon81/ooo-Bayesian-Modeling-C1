@@ -163,14 +163,17 @@ A **collection of cluster information**(parameters): (![formula](https://render.
 
 # [Note]
 The following three steps make one iteration. 
-- Step 1. **Clustering** (Accept/Reject G_0's suggestion) 
-  - The unique cluster proportions or the probability of each cluster (`π1`,`π2`,`π3`...`πk`) are defined as it goes...then the possibility of new cluster probability `πk+1` are considered when we assign new observation to the brandnew clusters (`parameter free joint` of Y annd X) and data pt decide to move in or not based on the probability comparison. 
+- [Step 1] **Clustering** (Accept/Reject G_0's suggestion) 
+  - The unique cluster proportions or the probability of each cluster (`π1`,`π2`,`π3`...`πk`) are defined as it goes...then the possibility of new cluster probability `πk+1` are considered when we assign new observation to the brandnew clusters (`parameter free joint` of Y and X) and data pt decide to move in or not based on the probability comparison. 
   - In this stage, **cluster memberships**(k) are fully defined. 
 
-- Step 2. **Likelihood Estimation** (**Likelihood** development based on the prior suggestion)
-  - Given the data points in each clusters, some extra strategies (such as imputation for missing data, etc.) can be implemented to refine the lieklihood.  
+- [Step 2] **Outcome_Model, Covariate_Model Refinement**  
+  - This is for the `parameter update`, the `unique cluster probability term development` later.
+  - Given the data points in each clusters, some extra strategies (such as imputation for missing data, etc.) can be implemented to refine them.  
+  - For Outcome Model, we filling in any missing data, then integrate them out the covariates with missing data. 
+  - For Covariate Model, we naturally ignore any covariates with missing data. 
 
-- Step 3. **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
+- [Step 3] **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
   - Note that in the parameter estimation stage, you need to have a **complete data!** 
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
 
