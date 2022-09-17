@@ -9,7 +9,7 @@ Non-parametric Bayesian Model
  <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" width="60%" height="60%" />
 
  - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
- <img src="https://user-images.githubusercontent.com/31917400/75427803-12b6c100-593f-11ea-9e5e-1faf5e83b4a5.jpg" width="80%" height="80%" />
+ <img src="..." width="80%" height="80%" />
 
 > ## But how Random Process can deal with infinite hyper-parameter?
 parameter size VS parameter value ???
