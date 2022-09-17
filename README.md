@@ -3,7 +3,7 @@ Non-parametric Bayesian Model
  - GP
  - DP
 
-### Random process is a collection of different random variables, defined on a common probability space, taking values in a common set S (the state space), and indexed (labeled) by a set T, thought of as time (discrete or continuous respectively). As moving along the horizontal axis (sigma algebra), the different RV with different sample space appears and produces random output.  
+### Random process is a collection of different random variables, defined on a common probability space, taking values in a common set 'w' (the state space), and indexed (labeled) by a set 't', thought of as time (discrete or continuous respectively). As moving along the horizontal axis (sigma algebra), the different RV with different sample space appears and produces random output.  
  - When `t` variable is discrete, RP is: ![formula](https://render.githubusercontent.com/render/math?math=X_1,X_2,...X_?)
  - When `t` variable is continuous, RP is: {![formula](https://render.githubusercontent.com/render/math?math=X_t)} where t>0 
  <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" width="60%" height="60%" />
