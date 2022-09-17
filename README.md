@@ -9,14 +9,7 @@ Non-parametric Bayesian Model
  <img src="https://user-images.githubusercontent.com/31917400/75095722-e0e4d980-558f-11ea-856e-0493d6ebb053.jpg" width="60%" height="60%" />
 
  - RP is probability distribution over `trajectories of journey of θ`(random walks) such as Markov Chain. 
- <img src="..." width="80%" height="80%" />
-
-> ## But how Random Process can deal with infinite hyper-parameter?
-parameter size VS parameter value ???
- - Run the experiments by each parameter size...denoted by `t`.  
- - If you found parameter value pool `w` by each `t`, then you can get the samples by each `t` ???
-   - Random(Stochastic) Process refers to the infinite `t` (infinitely hyperparameterized) collection of random variables.
-   - ## With the passage of infinite hyper-parameterization of `t` , the outcomes(resulting parameter pool)`w` of a certain experiment will change, and hit the all possible sample space. We simply want the stationary parameter pool..by summarizing all output?
+ <img src="https://user-images.githubusercontent.com/31917400/190852865-a680f967-b687-4c9b-add6-bfac3da46558.jpg" width="80%" height="80%" />
 
 
 
