@@ -155,7 +155,7 @@ A **collection of cluster information**(parameters): (![formula](https://render.
 
 
 # [Note]
-The following three steps make one iteration. 
+The following three steps make one iteration (investigating every corner of parameter space)
 - [Step 1] **Clustering** (Accept/Reject G_0's suggestion) 
   - The unique cluster proportions or the probability of each cluster (`π1`,`π2`,`π3`...`πk`) are defined as it goes...then the possibility of new cluster probability `πk+1` are considered when we assign new observation to the brandnew clusters (`parameter free joint` of Y and X) and data pt decide to move in or not based on the probability comparison. 
   - In this stage, **cluster memberships**(k) are fully defined. 
