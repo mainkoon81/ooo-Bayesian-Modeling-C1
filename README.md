@@ -163,7 +163,7 @@ The following three steps make one iteration (investigating every corner of para
 - [Step 2] **Outcome_Model, Covariate_Model Refinement**  
   - This is for the preparation of the `parameter update`, the `unique cluster probability term` development required to determine the later selection criteria.
   - Given the data points in each clusters, `some extra strategies` (such as imputation for missing data, etc.) can be implemented to refine them.  
-    - For **Outcome Model**, we **imputing** values for **N/A**, then integrate them out the covariates with missing data. So..it looks like the model ignores the missing data, but it doesn't.. 
+    - For **Outcome Model**, we **imputing** values for **N/A** using the imputation model (outcome density*covariate densities that have NA), then to obtain the final outcome model, we take the imputation model and integrate it out the covariates with missing data. So..at the first glance, it looks like the outcome model ignores the missing data, but it doesn't.. it integrates it out.
     - For **Covariate Model**, we simply **ignore** any covariates that have **N/A**. 
 
 - [Step 3] **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
