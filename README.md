@@ -161,10 +161,10 @@ The following three steps make one iteration (investigating every corner of para
   - In this stage, **cluster memberships**(k) are fully defined. 
 
 - [Step 2] **Outcome_Model, Covariate_Model Refinement**  
-  - This is for the `parameter update`, the `unique cluster probability term development` later.
-  - Given the data points in each clusters, some extra strategies (such as imputation for missing data, etc.) can be implemented to refine them.  
-  - For Outcome Model, we **imputing** values for **N/A**, then integrate them out the covariates with missing data. So..it looks like the model ignores the missing data, but it doesn't.. 
-  - For Covariate Model, we naturally **ignore** any covariates with **N/A**. 
+  - This is for the preparation of the `parameter update`, the `unique cluster probability term` development required to determine the later selection criteria.
+  - Given the data points in each clusters, `some extra strategies` (such as imputation for missing data, etc.) can be implemented to refine them.  
+    - For **Outcome Model**, we **imputing** values for **N/A**, then integrate them out the covariates with missing data. So..it looks like the model ignores the missing data, but it doesn't.. 
+    - For **Covariate Model**, we simply **ignore** any covariates that have **N/A**. 
 
 - [Step 3] **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
   - Note that in the parameter estimation stage, you need to have a **complete data!** 
