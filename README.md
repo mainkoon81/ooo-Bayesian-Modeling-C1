@@ -168,7 +168,7 @@ The following three steps make one iteration (investigating every corner of para
 
 - [Step 3] **Parameter Re-Estimation** (**Posterior** development based on the likelihood)
   - Note that in the parameter estimation stage, you need to have a **complete data!** 
-  - The prameters of each cluster (X`β`, `σ^2`) are re-calculated based on the data pt they have.. 
+  - The prameters of each cluster (X`β`, `σ^2`) are re-calculated (re-sampled) based on the data pt they have and the selection criteria built upon two CL probabilities) 
 
 # > Detail I. IntraCorrelation strategy 
 <img src="https://user-images.githubusercontent.com/31917400/173237731-f3150a14-c6c6-48c5-b04a-864c0542b3a3.jpg" width="90%" height="90%" />
