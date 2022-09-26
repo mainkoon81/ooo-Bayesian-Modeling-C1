@@ -210,7 +210,7 @@ We can construct the DP prior: `α` (Suggestion Reliability), using Non-parametr
  - Sol 2) Chinese-Restaurant scheme(**assigning membership to new point**)
    - : A customer is more likely to sit at a table if there are already many people sitting there. However, with probability proportional to `α`, the customer will ask a new table.
      
- - ### [1] Stick-Breaking scheme: 
+ - ### [1] Stick-Breaking scheme: for cluster weight generation?
    - **`Creating a decent distribution: G(A_i)`**, "the each single stick", an element of **G**. 
    - How to obtain a candidate probability values of the pizza with infinite slicing?
      - Using the "adjusted Beta value": **GEM(hyperparameter `α`)** which is an adjusted probability value. 
