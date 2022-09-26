@@ -203,7 +203,7 @@ Escobar and West developed the posterior distribution for the DP prior: `α` as 
 
 
 
-## Generation of samples
+# Sample Generation ?
 We can construct the DP prior: `α` (Suggestion Reliability), using Non-parametric **prior construction** scheme. 
  - Sol 1) Stick-Breaking scheme(**creating "G" distribution**)
    - : Big `α` results in big sticks while small `α` results in small sticks.
