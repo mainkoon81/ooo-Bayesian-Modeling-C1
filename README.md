@@ -195,16 +195,15 @@ The goal is to find the distribution of the clean covariate!
 ## - Mismeasured Binary Predictor
 t.b.d....
 
-
-
-
-
 # Story on `α`
 ## Classic
 Escobar and West developed the posterior distribution for the DP prior: `α` as follows:
 <img src="https://user-images.githubusercontent.com/31917400/171143039-e3e1326a-0b80-408c-9345-d526c0538520.jpg" />
 
-## Others
+
+
+
+## Generation of samples
 We can construct the DP prior: `α` (Suggestion Reliability), using Non-parametric **prior construction** scheme. 
  - Sol 1) Stick-Breaking scheme(**creating "G" distribution**)
    - : Big `α` results in big sticks while small `α` results in small sticks.
