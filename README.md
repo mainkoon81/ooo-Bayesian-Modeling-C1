@@ -217,7 +217,7 @@ We can construct the DP prior: `α` (Suggestion Reliability), using Non-parametr
      - Based on the properties of Beta:
        - Big Hyperparameter: result in big sticks
        - Small Hyperparameter: result in small stick
-   <img src="https://user-images.githubusercontent.com/31917400/74085265-33da6f00-4a6f-11ea-9daa-2625a3e15f0b.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/195827008-c7785831-238d-4f00-b615-17aeb7cebc2b.jpg" />
   
  - ### [2] Chinese-Restaurant-Process scheme:
    - **`Assigning a membership to new point`**
