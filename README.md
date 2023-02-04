@@ -171,7 +171,7 @@ The following three steps make one iteration (investigating every corner of para
   - The prameters of each cluster (X`β`, `σ^2`) are re-calculated (re-sampled) based on the data pt they have and the selection criteria built upon two CL probabilities) 
 
 # > Detail 0. regression coefficient
-<img src="https://user-images.githubusercontent.com/31917400/216771683-d8a3e583-c35c-451d-ab31-d4c05e634bee.jpg" width="90%" height="90%" />
+<img src="https://user-images.githubusercontent.com/31917400/216772169-3d8cb6ad-b432-4698-af03-1c87badaf25e.jpg" width="90%" height="90%" />
 
 # > Detail I. IntraCorrelation strategy 
 <img src="https://user-images.githubusercontent.com/31917400/173237731-f3150a14-c6c6-48c5-b04a-864c0542b3a3.jpg" width="90%" height="90%" />
